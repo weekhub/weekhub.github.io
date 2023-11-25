@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>解除B站区域限制方法</title>
+      <link href="/2023/11/25/2%20(11)/"/>
+      <url>/2023/11/25/2%20(11)/</url>
+      
+        <content type="html"><![CDATA[<p>请勿在B站宣传公共解析服务器，否则可能会被拉黑，免费的解析服务器还是要好好爱护。</p><span id="more"></span><p>众所周知在B站有些番剧是港澳台限定，直接在大陆是打不开的，除非用科学魔法，但是有些小伙伴又没有相关的渠道又不想去折腾，所以有大佬写了油猴脚本，方便一些只想看番剧的小伙伴使用，但此方法适用于电脑端浏览器，后面的解析服务器安卓插件也能用。</p><p>安卓端请使用哔哩漫游插件： <strong><a href="https://github.com/yujincheng08/BiliRoaming">插件GitHub网址</a></strong></p><p>此浏览器脚本需要配合油猴插件来使用，插件可以在油猴官网获取：<br><strong><a href="https://www.tampermonkey.net/?locale=zh">油猴官网</a></strong><br>，或者你能找到的其他安装油猴插件的网站都可以，安装好插件再去叉子网，也就是greasy<br>fork网站装脚本，这个网站也提供其他很多的脚本，刷网课啊和视频解析什么的都有，但是本文只安装解除B站区域限制的这个脚本，链接：<br><strong><a href="https://greasyfork.org/zh-CN/scripts/25718">解除B站区域限制</a></strong> ，安装好后进入设置页面，如下：</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/10/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2023-10-28-110913.png" alt=""></p><p>在代理服务器填入公共解析服务器内的地址，公共解析服务器网址连接：<br><strong><a href="https://github.com/yujincheng08/BiliRoaming/wiki/%E5%85%AC%E5%85%B1%E8%A7%A3%E6%9E%90%E6%9C%8D%E5%8A%A1%E5%99%A8">公共解析服务器</a></strong><br>，这个网站是GitHub地址，可能有些小伙伴打开的比较慢，填入服务器连接到设置的自定义服务器地址里，然后再选择替换upos服务器，选择阿里或者腾讯都可以，再勾选替换Akamai，不这样做可能会比较慢，如下设置：</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/10/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2023-10-28-110941.png" alt=""></p><p>都设置好后打开一个港澳台番剧测试，等待网页跳转一下应该就能看了，切记不要大肆宣传，如果一个服务器地址解析不了就去解析服务器网址换一个测试，或者有条件动手能力有强的小伙伴可以根据<br><strong>[教程](<a href="https://github.com/ipcjs/bilibili-helper/blob/user.js/packages/unblock-">https://github.com/ipcjs/bilibili-helper/blob/user.js/packages/unblock-</a><br>area-<br>limit/README.md#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8)</strong><br>自行搭建解析服务器。</p><p>例如在腾讯云函数或者阿里云函数里部署：</p><p>首先注册腾讯云或者阿里云，然后进入对应的云函数界面，这里以腾讯云为例，进入云函数服务页面，左上角选择对应的地区，港澳台地区一般选择香港就行，然后新建函数</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/10/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2023-10-28-112643.png" alt=""></p><p>新建函数，选择从头开始，再选择web函数(有些服务器商叫http函数)，随便取个函数名称，运行环境选择PHP7.x版本，时区改不改都无所谓，改的话选择北京时间，在线编辑代码和其他的不用动，同意条款点击完成。</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/10/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2023-10-28-113318-1024x734.png" alt=""></p><p>云函数配置完成后进入函数管理，打开函数代码进行在线编辑，删掉默认的代码，把zzc10086大佬提供的<a href="https://github.com/zzc10086/grocery_store/blob/master/bili_proxy/Tencent_SCF_BPplayurl.php"><br><strong>代码</strong></a>全部复制并粘贴，拉到下面保存部署，等待部署完成。</p><p>右侧显示部署完成</p><p>进入右侧函数URL，创建函数URL，打开公网访问点击提交，此时你就得到你的代理解析服务器地址了，复制粘贴到脚本自定义代理服务器里使用，应该就能使用了。</p><p>腾讯云每个月有免费云函数用量，个人使用应该不会超出限制，教程里也有其他方法，动手能力强的小伙伴可以自行研究。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows子系统Ubuntu</title>
+      <link href="/2023/11/20/2%20(12)/"/>
+      <url>/2023/11/20/2%20(12)/</url>
+      
+        <content type="html"><![CDATA[<p>Win 的 Linux 子系统非常适合跑这些，因为本地主机盘是被挂载到虚拟机的<code>/mnt</code> 里的，数据读写十分方便</p><span id="more"></span><h3 id="启用虚拟化">启用虚拟化</h3><p>Windows 的子系统都需要启用 Hyper-V 和硬件虚拟化才能使用，那首先需要开启这俩功能。</p><p>打开<code>启用或关闭 Windows 功能</code> （搜索即可找到），勾选<code>Hyper-V</code></p><p>然后开启硬件虚拟化</p><p>首先进入任务管理器，CPU，查看虚拟化是否启用，若：<code>虚拟化：已启用</code> ，则代表启用了</p><p>若没有启用，则需要进主板的 BIOS 操作（开机/重启按 F2，F8，F12 或 Delete 之类的，自己搜一下自己主板进入BIOS的快捷键）</p><p>然后找 Virtual 或 Virtualization, 或VT-X 或 VMS 之类的关键词，启用他们 …</p><p>最后重启电脑</p><h3 id="安装-Ubuntu">安装 Ubuntu</h3><p>进入应用商店，搜索 Ubuntu，选一个，个人在用<code>Ubuntu 22.04.2 LTS</code> ，下载安装即可</p><p>安装完成后点开后等一会，设置一个非 root 用户名和密码即可使用了</p><h3 id="其他问题">其他问题</h3><p>点开 Ubuntu，如果碰到这个问题：</p><pre><code>* Installing, this may take a few minutes...* WslRegisterDistribution failed with error: 0x800701bc* Error: 0x800701bc WSL 2 ?????????????????? https://aka.ms/wsl2kernel* Press any key to continue...</code></pre><p>可通过微软官方教程解决：&lt;<a href="https://learn.microsoft.com/zh-cn/windows/wsl/install-">https://learn.microsoft.com/zh-cn/windows/wsl/install-</a><br>manual#step-4—download-the-linux-kernel-update-package&gt;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Ubuntu </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>DICOM协议</title>
+      <link href="/2023/11/20/3%20(16)/"/>
+      <url>/2023/11/20/3%20(16)/</url>
+      
+        <content type="html"><![CDATA[<p>不同于html或xml等协议把信息保存为文本格式，protobuf把数据保存为二进制，DICOM协议的数据既有文本格式又有二进制格式。</p><span id="more"></span><h2 id="文件存储格式">文件存储格式</h2><p>用文本编辑器打开一个dcm文件，数字字母这些我们认识的就是文本数据，叉叉圈圈框框……这些就是二进制数据。由于二进制数据在不同的计算机系统上的字节序不同（可以参考<a href="https://en.wikipedia.org/wiki/Endianness">big-endian和little-endian</a>相关知识<br>），当DICOM数据在不同的系统间传输时，就要采用统一的标准，在后来DICOM传输部分会有进一步说明。</p><h2 id="数据组成-Data-Element">数据组成 Data Element</h2><p>一个完整的DICOM文件或数据是由一个个独立的数据元素（Data Element）组成的，每一个数据元素遵循相同的格式，包含：</p><ul><li>唯一标识此元素的标签Tag值</li><li>描述元素中数据格式的Value Representation</li><li>数据的长度</li><li>数据内容</li></ul><h2 id="标签-Tag">标签 Tag</h2><p>每个标签由Group值和Element值组成，Group值相同的两个数据元素在逻辑或医学概念上一般可以归为一类。Group值和Element值分别保存为两个字节整数，在DICOM协议的文档和字典中通常以括号中被逗号隔开的的两个16进制数表示。</p><h2 id="值表现-Value-Representation">值表现 Value Representation</h2><p>DICOM标准在<a href="http://dicom.nema.org/medical/dicom/current/output/html/part05.html">PS3.5</a>中定义了27个基本数据类型，就是所谓的值表现（VR）。值表现是用来封装所有可能的临床数据类型的。在DICOM中写任何东西必须符合27个类型中的一个。每个VR都有他自己两个字母的缩写，表示内容的定义，数据中允许出现的字母描述，以及规定的数据长度。详细的定义见<a href="http://dicom.nema.org/medical/dicom/current/output/html/part05.html#table_6.2-1">VR<br>Table6.2-1</a></p><p>从程序员角度看，DICOM定义的VR有二十七中之多（甚至有表示未知数据类型的UN），相比大多数编程语言区区几个基本数据类型，实在是够复杂的。比如标示时间日期的就有DA（日期）、TM（时间）、DT（时间日期）、AS（年龄字符串），表示文本字符串的有CS（代码字符串）、SH（短字符串）、LO（长字符串）、ST（短文本）、LT（长文本）、UT（无限制文本），每个都有不同的定义、数据长度和使用规则。虽然复杂的VR规则有很多遗留的缺点和陷阱，但也使DICOM协议的能独立于计算机硬件，保证了数据的统一性。</p><h2 id="数据字典-Data-Dictionary">数据字典 Data Dictionary</h2><p>在DICOM标准的<a href="http://dicom.nema.org/medical/dicom/current/output/html/part06.html">PS3.6</a>中，DICOM数据字典对所有标准中的DICOM数据元素（属性）进行了定义，按照Tag值顺序排列，包含数据的名称，值表现（VR），数据元素多样性（VM，Value<br>Multiplicity），Retried Status。DICOM数据字典就是在数字医疗方面，所有标准数据项（属性）的注册表。</p><p>有了DICOM<br>Dictionary不同系统的开发者就可以按照统一标准解析和处理DICOM数据了。我们使用DICOM开发库DCMTK自带的dcmdump工具把同一个DICOM文件打印出来，得到了可读的DICOM信息。需要注意的是这是软件显示DICOM信息格式，不同的软件或选择不同的格式，实际存储格式是如图2所示。</p><h2 id="未完待续……">未完待续……</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DICOM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Sed编辑器</title>
+      <link href="/2023/11/15/3%20(15)/"/>
+      <url>/2023/11/15/3%20(15)/</url>
+      
+        <content type="html"><![CDATA[<p>Sed编辑器被称作“流编辑器”，不同于一般的交互式文本编辑器（比如Vim、nano）需要用户交互式的输入来编辑文本内容，Sed会基于预先提供的一组规则来编辑数据流</p><span id="more"></span><p>在Shell脚本中，解析LOG文件或修改配置文件等处理文本文件的任务非常普遍。而Sed这样的命令行编辑器正好满足在Shell脚本中完成自动处理文本的需求。</p><h2 id="调用选项">调用选项</h2><pre><code>sed [OPTION]... &#123;script-only-if-no-other-script&#125; [input-file]...  </code></pre><table><thead><tr><th>选项</th><th>描述</th></tr></thead><tbody><tr><td>-e</td><td>进行多项编辑，即对输入行应用多条sed命令时使用</td></tr><tr><td>-n</td><td>取消默认的输出, 等待print命令输出</td></tr><tr><td>-i</td><td>表示将转换结果直接插入文件中</td></tr><tr><td>-f</td><td>按照指定的sed脚本里面的命令来进行转换</td></tr></tbody></table><p>如果sed调用时没有 -e，-f 或者 –file 参数，第一个非选项的参数将被作为sed脚本，剩余参数都将作为输入文件名。<br>如果未指定输入文件名，sed将会读取标准输入STDIN。在shell编程中，用户可以直接将数据管道输出到sed上进行处理。</p><pre><code>$ echo &quot;This is a test&quot; | sed 's/test/big test/'  This is a big test  </code></pre><p>由于<code>-i</code>选项会直接修改原文件，在操作重要文件时请谨慎使用。<br>如果未指定<code>-i</code>选项，sed不会改变原文件中的内容，只会将结果导出到标准输出。用户也可以用<code>&gt;</code>重定向到另一个文件。<br>在实际应用中，可以用sed基于配置文件模板，生成新的配置文件。</p><pre><code>sed 's/Version:VER/Version:5.0/g' config_template &gt; config  </code></pre><p>上面例子中sed读取config_template内容，将版本改为5.0，然后生成新的config文件。</p><h2 id="行寻址">行寻址</h2><p>默认情况下sed中使用的命令会作用于文本数据的所有行。如果需要限定命令只作用于某些行，需要指定行寻址（line addressing）。</p><pre><code># 地址作用单个命令  [address] command  # 地址作用于多个命令  [address] &#123;  command1  command2  command3  &#125;  </code></pre><p>地址可以是： <strong>行号，正则表达式，或者匹配区间</strong> ，具体如下面例子所示：</p><pre><code>$ sed '2s/dog/cat/' data           # 只作用于第2行  $ sed '2,5s/dog/cat/' data         # 作用于2至5行  $ sed '5,$s/dog/cat/' data         # 作用于5到最后一行  $ sed '/pattern/s/dog/cat/' data   # 只作用于匹配pattern的行  $ sed '/pattern1/,/pattern2/s/dog/cat/' data # 作用于匹配pattern1的行到匹配pattern2的行之间  $ sed '2,/pattern/s/dog/cat/' data # 开始于第2行，直到匹配pattern的行结束  $ sed '2&#123;  &gt; s/fox/elephant/  &gt; s/dog/cat/  &#125;'                                 # 多个命令  </code></pre><h2 id="定界符">定界符</h2><p>sed中一般使用正斜线作为字符串的分隔符，当然也允许使用其他字符作为定界符。</p><pre><code>$ sed 's/text/TEXT/g'  $ sed 's:text:TEXT:g'   $ sed 's|text|TEXT|g'  </code></pre><p>但是定界符出现在样式内部时，需要进行转义。最常见的就是在Linux中文件路径是正斜线，如果sed的命令表达式也使用正斜线作为定界符，就必须使用反斜线转义。</p><pre><code>sed 's/\/bin\/bash/\/bin\/csh/' /etc/passwd  sed 's!/bin/bash!/bin/csh!' /etc/passwdls  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Sed </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Lean 精益软件开发</title>
+      <link href="/2023/11/14/3%20(18)/"/>
+      <url>/2023/11/14/3%20(18)/</url>
+      
+        <content type="html"><![CDATA[<p>精益软件开发是精益制造原则和实践在软件领域的应用。精益制造或精益生产是来源于丰田生产方式<br>(TPS)的生产哲学，因此也称为丰田主义 (Toyotism)。</p><span id="more"></span><h3 id="精益原则"><a href="#精益原则" class="headerlink" title="精益原则"></a>精益原则</h3><p>对比精益原则和敏捷宣言，不难发现，精益在制造业中的原则与敏捷在软件开发中的宗旨本质上是一致的，将在后文中通过对Scrum和Kanban的对比进一步阐述。</p><h1 id="Kanban"><a href="#Kanban" class="headerlink" title="Kanban"></a>Kanban</h1><p>看板是丰田生产方式（Toyota Production System，TPS）中用来支持非集中“拉动式”生产控制（non-centralized<br>“pull” production control）而使用的卡片。作为精益生产的工具，它现在已经应用于世界各地的制造企业之中。</p><p>本文只介绍精益与看板的基本工作方式，更多内容可以参考阅读<a href="http://book.douban.com/subject/3032009/">《丰田精益生产方式》</a>、<a href="http://book.douban.com/subject/11620809/">《精益开发实战》</a></p><h3 id="看板的工作方式可以总结如下："><a href="#看板的工作方式可以总结如下：" class="headerlink" title="看板的工作方式可以总结如下：###"></a>看板的工作方式可以总结如下：###</h3><ul><li><strong>将流程可视化</strong><ul><li>把工作拆分成小块，一张卡片写一件任务，在把卡片放到墙上</li><li>每一列都起一个名字，显示每件任务在流程中处于什么位置</li></ul></li><li><strong>限制WIP</strong> （work in progress）明确限制流程中的每个状态最多同时进行的任务数</li><li><strong>度量生产周期</strong> （完成一件任务的平均时间），对流程进行调优，尽可能缩短生产周期，并使其可预测</li></ul><p>&#x2F;2014&#x2F;10&#x2F;28&#x2F;Scrum-Kanban-In-Our-Work-3&#x2F;)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Lean </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>snippet</title>
+      <link href="/2023/11/12/3%20(14)/"/>
+      <url>/2023/11/12/3%20(14)/</url>
+      
+        <content type="html"><![CDATA[<p>Snippet（片段）在编程中是指一段可复用的代码或文本，在绝大部分编辑器和IDE中都有Code Snippet功能。</p><span id="more"></span><p>CodeSnippet代码片段自动生成据说是textMate首创的，现在主流的编辑器和IDE都有类似的功能，可以让用户针对不同的场景定制、管理和插入代码片段。在Vim中自从我用了ultisnips，傍观者的智商再也跟不上我码代码的速度，谈笑风生，弹指间满屏代码，可谓居家旅行必备装X神奇。</p><h2 id="Vim中的Ultisnips插件">Vim中的Ultisnips插件</h2><p><a href="https://github.com/SirVer/ultisnips">Ultisnips</a>是Vim的明星插件，可以配合[YouCompleteMe](/2013/05/16/killer-<br>plugin-of-vim-<br>youcompleteme/)或者Neocomplete的自动补全，使用体验上不逊于任何现代编译器和IDE。使用[Vundle](/2013/04/12/killer-<br>plugin-of-vim-<br>vundle/)安装ultisnips非常的简单，设置也有非常详细的<a href="https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt">文档</a>。</p><p>ultisnips 配置</p><pre><code>&quot; Track the engine.  Plugin 'SirVer/ultisnips'    &quot; Snippets are separated from the engine. Add this if you want them:  Plugin 'honza/vim-snippets'    &quot; Trigger configuration. Do not use &lt;tab&gt; if you use https://github.com/Valloric/YouCompleteMe.  let g:UltiSnipsExpandTrigger=&quot;&lt;tab&gt;&quot;  let g:UltiSnipsJumpForwardTrigger=&quot;&lt;c-b&gt;&quot;  let g:UltiSnipsJumpBackwardTrigger=&quot;&lt;c-z&gt;&quot;    &quot; If you want :UltiSnipsEdit to split your window.  let g:UltiSnipsEditSplit=&quot;vertical&quot;  </code></pre><p>当然vim大神们肯定不会只造一个轮子，<a href="https://github.com/msanders/snipmate.vim">snipmate</a>和<a href="https://github.com/Shougo/neosnippet.vim">neosnippet</a>也都不少拥护者，还有一些不错的snippet库：[1](<a href="https://github.com/spf13/snipmate-">https://github.com/spf13/snipmate-</a><br>snippets)、[2](<a href="https://github.com/scrooloose/snipmate-">https://github.com/scrooloose/snipmate-</a><br>snippets)、[3](<a href="https://github.com/honza/vim-">https://github.com/honza/vim-</a><br>snippets)。这些插件大部分都支持textmate格式的snippet，配置和trigger方法都大同小异，并可以根据自己项目的code<br>guideline修改snippets。但是像所有Vim的东西一样，入门的过程并不轻松，暗坑无数。本着适度折腾的原则，问题遇见了再说。</p><pre><code>extends c    ###########################################################################  #                            TextMate Snippets                            #  ###########################################################################  snippet cl &quot;class .. (class)&quot; !  class $&#123;1:`!p snip.rv = snip.basename or &quot;name&quot;`&#125;  &#123;  public:    $&#123;1/(\w+).*/$1/&#125;($&#123;2:arguments&#125;);    virtual ~$&#123;1/(\w+).*/$1/&#125;();    private:    $&#123;0:/* data */&#125;  &#125;;  endsnippet    snippet ns &quot;namespace .. (namespace)&quot; !  namespace$&#123;1/.+/ /m&#125;$&#123;1:`!p snip.rv = snip.basename or &quot;name&quot;`&#125;  &#123;  $&#123;VISUAL&#125;$&#123;0:$&#123;VISUAL/(.*)/(?1::\/* code *\/)/&#125;&#125;  &#125;$&#123;1/.+/ \/\/ namespace /m&#125;$1$&#123;1/.+/ /m&#125;  endsnippet  </code></pre><h2 id="Sublime-text-3中的snippet">Sublime text 3中的snippet</h2><p>Sublime Text作为更现代更人性化的编辑器，snippet的配置也更加方便，只要在Tools工具栏中点击New<br>Snippet就能创建一个新的Snippet模板，这个模板的语法非常直观，用户可以定义snippet的tabTrigger和scope。</p><p>codeblock.sublime-snippet</p><pre><code>&lt;snippet&gt;  &lt;content&gt;&lt;![CDATA[  &#123;% codeblock lang:$&#123;1:lang&#125; %&#125;      $&#123;2:code&#125;      &#123;% endcodeblock %&#125;  ]]&gt;&lt;/content&gt;  &lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&gt;  &lt;tabTrigger&gt;codeblock&lt;/tabTrigger&gt;  &lt;!-- Optional: Set a scope to limit where the snippet will trigger --&gt;  &lt;scope&gt;text.html.markdown&lt;/scope&gt;  &lt;/snippet&gt;  </code></pre><p>这里需要注意的是，截止目前为止，sublime的每个snippet需要保存在单独文件中，而且文件的后缀名一定要是<code>.sublime- snippet</code>。sublime中的scope概念是从textmate中借鉴过来的，下面的列表是sublime中主要支持的scope定义。</p><pre><code>Here is a list of scopes to use in Sublime Text snippets -     ActionScript: source.actionscript.2  AppleScript: source.applescript  ASP: source.asp  Batch FIle: source.dosbatch  C#: source.cs  C++: source.c++  Clojure: source.clojure  CoffeeScript: source.coffee  CSS: source.css  D: source.d  Diff: source.diff  Erlang: source.erlang  Go: source.go  GraphViz: source.dot  Groovy: source.groovy  Haskell: source.haskell  HTML: text.html(.basic)  JSP: text.html.jsp  Java: source.java  Java Properties: source.java-props  Java Doc: text.html.javadoc  JSON: source.json  Javascript: source.js  BibTex: source.bibtex  Latex Log: text.log.latex  Latex Memoir: text.tex.latex.memoir  Latex: text.tex.latex  LESS: source.css.less  TeX: text.tex  Lisp: source.lisp  Lua: source.lua  MakeFile: source.makefile  Markdown: text.html.markdown  Multi Markdown: text.html.markdown.multimarkdown  Matlab: source.matlab  Objective-C: source.objc  Objective-C++: source.objc++  OCaml campl4: source.camlp4.ocaml  OCaml: source.ocaml  OCamllex: source.ocamllex  Perl: source.perl  PHP: source.php  Regular Expression(python): source.regexp.python  Python: source.python  R Console: source.r-console  R: source.r  Ruby on Rails: source.ruby.rails  Ruby HAML: text.haml  SQL(Ruby): source.sql.ruby  Regular Expression: source.regexp  RestructuredText: text.restructuredtext  Ruby: source.ruby  SASS: source.sass  Scala: source.scala  Shell Script: source.shell  SQL: source.sql  Stylus: source.stylus  TCL: source.tcl  HTML(TCL): text.html.tcl  Plain text: text.plain  Textile: text.html.textile  XML: text.xml  XSL: text.xml.xsl  YAML: source.yaml  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> IDE </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> snippet </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Scrum 和 Kanban</title>
+      <link href="/2023/11/01/3%20(17)/"/>
+      <url>/2023/11/01/3%20(17)/</url>
+      
+        <content type="html"><![CDATA[<p>Scrum 和 Kanban相似性和差异</p><span id="more"></span><h2 id="Scrum-和-Kanban的相似性">Scrum 和 Kanban的相似性</h2><ul><li>都是既精益又敏捷。</li><li>都是拉动式计划。</li><li>都限制了 WIP。</li><li>都以透明的方式驱动过程改进。</li><li>都关注于尽早交付、频繁交付可发布的软件。</li><li>根基都是自组织型团队。</li><li>都需要把工作拆分。</li><li>发布计划都是根据经验数据（生产率/生产周期）不断优化的</li></ul><h2 id="Scrum-和-Kanban的差异">Scrum 和 Kanban的差异</h2><p>可以说Kanban更注重生产过程中的流动性，通过对各环节WIP和资源的不断调整，确保整个“生产线”的平稳运转。而Scrum更关注迭代和反馈，通过不断的自我反馈修正，达到对Backup的有效管理，<br>对Sprint的准确预估，确保开发过程和变更的统一。两种方式都是通过对团队生产力平衡的把握，达到最大的生产效率。区别只是Scrum规定了更严格的任务角色和执行方式，而Kanban更加灵活可变。</p><h2 id="借鉴Kanban，调整LFI后的Scrum流程">借鉴Kanban，调整LFI后的Scrum流程</h2><p>正如前文所说，LFI的工作内容更加变化多样，沟通方式一样面对更多挑战。Team在沟通之后，决定先推行以下几项改进，更多优化将会随着工作的深入提上日程。</p><ul><li>打破现在Scrum编制，由QE为主导</li><li>利用Jira功能建立团队Kanban，调整Filter，使其包含Expoloration Test，Test Case，PR等不同领域的任务</li><li>由Test Manager和SM，SA通过实践共同确定Team的流程中的WIP</li><li>保留Scrum每日晨会，建立与PRCB和Task Manager的沟通渠道，实时调整任务优先级。</li><li>设置新的周期性反馈事件</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 无 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 无 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>借助python的defaultdict结构树形结构</title>
+      <link href="/2023/10/27/3%20(20)/"/>
+      <url>/2023/10/27/3%20(20)/</url>
+      
+        <content type="html"><![CDATA[<p>在开发一个编译工具的时候，遇到了一个特殊的需求，要把一组已知绝对路径的文件，排列成一个树形结构</p><span id="more"></span><p>开发的工具是python，所以当然不能满足于代码能够工作就行了，一定要高效和优(zhuang)雅(bi)。结果发现动态语言的确在不停的颠覆CPPer的世界观。</p><p>借助python的defaultdict结构可以构造出一个一句话的复杂树形结构，这个结构虽然不好理解，但是可以神奇的动态增长。</p><pre><code>from collections import defaultdict  Tree = lambda: defaultdict(Tree)  t = Tree()  t[1][2][3] = 4  t[1][3][3] = 5  t[1][2]['test'] = 6  </code></pre><p>上面代码可以得到如下图所示的结构</p><p>这么牛x的东西当然不是偶然出现的，而且有在计算机科学里还有一个不明觉厉的名字：<br><a href="http://en.wikipedia.org/wiki/Autovivification">autovivification</a>。<br>这种最早出现在Perl中的语言特性，现在已经被引入到Python, PHP,<br>Ruby等动态语言中。下面的例子中无处不体现着python独特的语言特性，非常值得学习。</p><pre><code>from collections import defaultdict    Tree = lambda: defaultdict(Tree)    t = Tree()    def add(t, keys):    for key in keys:      t = t[key]    def autovivify(levels=1, final=dict):      '''Returns a nested defaultdict with a set number of levels and defined final structure.      '''      return (defaultdict(final) if levels &lt; 2 else              defaultdict(lambda: autovivify(levels - 1, final)))     words = autovivify(5, int)  words[&quot;sam&quot;][2012][5][25][&quot;hello&quot;] += 1  words[&quot;sue&quot;][2012][5][24][&quot;today&quot;] += 1     def convert_nested_dd(dd):      '''Converts a nested defaultdict back into a native dictionary.      '''      return &#123;k:convert_nested_dd(v) for k,v in dd.items()&#125; if isinstance(dd, defaultdict) else dd  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>grub多系统启动引导程序</title>
+      <link href="/2023/10/25/3%20(19)/"/>
+      <url>/2023/10/25/3%20(19)/</url>
+      
+        <content type="html"><![CDATA[<p>项目最近都在windows下开发，整个team都被迫装了fedora和win7双系统</p><span id="more"></span><p>如果先装的是win7，后装的fedora会把grub引导装好。如果最后装的是windows，就必须修复一下grub，才能正确启动。GUN<br>grub是一个多系统启动引导程序，具体介绍看<a href="http://www.gnu.org/software/grub/">这里</a>。关于重装系统后怎么修复grub，网上有很多介绍，但是很多都是不求甚解，并不完全解决我的问题，特此将自己实践出的步骤记录在此，以备后用。</p><h2 id="用LiveCD修复grub2">用LiveCD修复grub2</h2><p>安装windows后修复grub2的方法很多，有各种系统修复工具还可以用grub4dos，但是我手边就有fedora16的liveCD，就不折腾其他的方法了。<br>使用live CD启动进入fedora16（这里因为我的window和linux装在不同的硬盘上，需要确保在bios里设置硬盘顺序是linux硬盘在前），</p><p>先找到linux安装在哪个硬盘分区</p><pre><code>su  fdisk -l  </code></pre><p>因为我以前安装了fedora 16和19，两个系统还挂载了共同的数据分区，fdisk的结果是相当的复杂。</p><p>到底哪个才是我想找的Linux分区呢，只好把分区mount上来，看一下里面都是神马东西。</p><pre><code>mount /dev/sda1 /mnt  ls /mnt  </code></pre><p>最后发现/dev/sda6里面的内容是这样的</p><p>其中包含启动时会加载的内核，这就是fedora16的/boot分区，那对应的/dev/sda7就是fedora16系统的其他部分了。</p><p>接下来把fedora16的硬盘挂载上来，重新安装grub，生成配置文件。</p><pre><code>mount /dev/sda7 /mnt  mount /dev/sda6 /mnt/boot  grub2-install --root-directory=/mnt /dev/sda  grub2-mkconfig -o /boost/grub2/grub.cfg  </code></pre><h2 id="修改grub2设置">修改grub2设置</h2><p>关于修改grub2的设置，比如等待时间、启动顺序等，网上很多帖子给出的方法是修改/boot/grub2/grub.cfg，其实这是官方不推荐的方法，因为这个配置文件会在你重装系统或者升级内核之后被更新，你的个人设定都会丢失。更正确的方法是修改/etc/default/grub<br>，然后每次系统有修改时，执行grub2-mkconfig，都会根据这个文件生成新的/boot/grub2/grub.cfg。<br>我自己的grub（v1.99）配置如下：</p><pre><code>GRUB_TIMEOUT=15  GRUB_DISTRIBUTOR=&quot;Fedora&quot;  GRUB_DEFAULT=saved #使用上次启动的系统作为默认系统  GRUB_SAVEDEFAULT=true #记住上次启动的系统  GRUB_CMDLINE_LINUX=&quot;rd.md=0 rd.lvm=0 rd.dm=0  KEYTABLE=us quiet SYSFONT=latarcyrheb-sun16 rhgb rd.luks=0 LANG=en_US.UTF-8 nouveau.modeset=0 rd.driver.blacklist=nouveau&quot;  </code></pre><p>如果需要指定默认启动项，使用下面的命令</p><pre><code>grep &quot;submenu\|^\smenuentry&quot; /boot/grub2/grub.cfg | cut -d &quot;'&quot; -f2 #list all possible menu entries  grub2-set-default &quot;&lt;submenu title&gt;&gt;&lt;menu entry title&gt;&quot; #set the desired default menu entry  grub2-editenv list #Verify the default menu entry  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> grub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>protobuf文件产生html文档的任务</title>
+      <link href="/2023/10/13/3%20(21)/"/>
+      <url>/2023/10/13/3%20(21)/</url>
+      
+        <content type="html"><![CDATA[<p>我们的系统是SOA架构，通讯协议是基于protobuf的，然而其他Team的开发者认为protobuf不好理解，要求一个类似docxgen产生的文档</p><span id="more"></span><p>PSE认为protobuf没有条理，最好能有一个格式化好的PDF文档以便于他审阅和签署protocol。其实protobuf已经是对通信协议的最直观的描述了，service和message的定义与文档结合一体，结构清晰。Google并没有提供给protobuf产生文档的工具，docxgen也没有迹象要支持protobuf,<br>显然大部分人不认为protobuf需要文档，但是世事就是这样的，客户的需求总是要满足的。幸好protobuf提供了足够的反射能力，自己造轮子的材料也是足够的。</p><p>基础结构和效果如上图所示，由两个C++写的binary和一个python<br>script组成。搞的这么复杂主要是为了不给系统增加任何第三方库依赖。ProtoFileConverter只依赖于已有的protobuf库，htmlPrinter只需要用到Qt，而我系统定制的protobuf库和Qt只有C++部分，所以这两个组件只能用C++实现。</p><h2 id="protobuf代码解析">protobuf代码解析</h2><p>ProtoFileConverter的核心是对*.proto文件进行语义分析，protobuf提供了compiler API可以很方便的解析proto文件。</p><pre><code>google::protobuf::compiler::DiskSourceTree sourceTree;  sourceTree.MapPath(&quot;&quot;, protoRoot);    // 定义一个google::protobuf::compiler::MultiFileErrorCollector的实现类 FileErrorCollector  FileErrorCollector errorCollector;    google::protobuf::compiler::Importer importer(&amp;sourceTree, &amp;errorCollector);  // import proto file到google::protobuf::FileDescriptor结构  const google::protobuf::FileDescriptor* fileDescriptor = importer.Import(protoFile);  </code></pre><p>从FileDescriptor可以得到当前proto文件中定义的所有service method message<br>enum的Descriptor。Descriptor的定义参考[官方文档](<a href="https://developers.google.com/protocol-">https://developers.google.com/protocol-</a><br>buffers/docs/reference/cpp/google.protobuf.descriptor#Descriptor)。用下面的函数就可以得到proto文件各元素的注释。</p><pre><code>template &lt;typename DescriptorType&gt;  static std::string GetDescriptorComment(const DescriptorType* descriptor) &#123;    google::protobuf::SourceLocation location;    std::string comments;    if (descriptor-&gt;GetSourceLocation(&amp;location)) &#123;      comments = location.leading_comments;      comments += &quot; &quot;;      comments += location.trailing_comments;    &#125;      return comments;  &#125;  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> protobuf </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> protobuf </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>全球DNS可用列表</title>
+      <link href="/2023/10/10/2%20(13)/"/>
+      <url>/2023/10/10/2%20(13)/</url>
+      
+        <content type="html"><![CDATA[<p>全球DNS可用列表</p><span id="more"></span><h3 id="海外的">海外的</h3><p>Google</p><pre><code>  * IPv4  * 8.8.8.8  * 8.8.4.4  * IPv6  * 2001:4860:4860::8888  * 2001:4860:4860::8844  * DoH  * https://dns.google/dns-query  * DoH for IPv6  * https://dns64.dns.google/dns-query  * DoT  * dns.google</code></pre><p>Cloudflare</p><pre><code>  * IPv4  * 1.1.1.1  * 1.0.0.1  *   * IPv6  * 2606:4700:4700::1111  * 2606:4700:4700::1001  *   * DoH  * https://cloudflare-dns.com/dns-query  * https://1.1.1.1/dns-query  * https://1.0.0.1/dns-query  *   * DoT  * 1dot1dot1dot1.cloudflare-dns.com  * one.one.one.one</code></pre><p>IBM  的 Quad9</p><pre><code>  * IPv4  * 9.9.9.9  * 149.112.112.112  *   * IPv6  * 2620:fe::fe  * 2620:fe::9  *   * DoH  * https://dns.quad9.net/dns-query  *   * DoT  * dns.quad9.net</code></pre><p><a href="http://DNS.SB">DNS.SB</a></p><pre><code>  * IPv4  * 185.222.222.222  * 45.11.45.11  *   * IPv6  * 2a09::  * 2a11::  *   * DoH  * https://doh.dns.sb/dns-query  * https://doh.sb/dns-query  *   * DoT  * dot.sb</code></pre><h3 id="Cisco-思科-OpenDNS">Cisco  思科  OpenDNS</h3><pre><code>  * IPv4  * 208.67.222.222  * 208.67.220.220  * 208.67.222.220  * 208.67.220.222  *   * IPv6  * 2620:119:35::35  * 2620:119:53::53  *   * DoH  * https://doh.opendns.com/dns-query</code></pre><h3 id="Yandex">Yandex</h3><pre><code>  * IPv4  * 77.88.8.8  * 77.88.8.1  *   * IPv6  * 2a02:6b8::feed:0ff  * 2a02:6b8:0:1::feed:0ff</code></pre><h3 id="国内">国内</h3><p>腾讯</p><pre><code>  * IPv4  * 119.29.29.29  * IPv6  * 2402:4e00::  *   * DoH  * https://doh.pub/dns-query  *   * DoT  * dot.pub</code></pre><p>阿里云</p><pre><code>  * IPv4  * 223.5.5.5  * 223.6.6.6  *   * IPv6  * 2400:3200::1  * 2400:3200:baba::1  *   * DoH  * https://dns.alidns.com/dns-query  *   * DoT  * dns.alidns.com</code></pre><p>百度</p><pre><code>  * IPv4  * 180.76.76.76  *   * IPv6  * 2400:da00::6666</code></pre><p>114</p><pre><code>  * IPv4  * 114.114.114.114  * 114.114.115.115</code></pre><h3 id="教育网">教育网</h3><pre><code>  * 202.38.64.1  * 安徽省合肥市 中国科学技术大学  * 202.103.243.112  * 广西桂林市 桂林电子科技大学  * 202.112.112.10  * 北京市 中国人民大学  * 202.112.144.30  * 北京交通大学   * 202.113.16.10  * 南开大学 网络中心首选  * 202.113.16.11  * 南开大学 学生邮件系统、网络中心备用  * 202.114.0.242  * 湖北省武汉市 华中科技大学  * 202.114.240.6  * 湖北省武汉市 武汉科技大学  * 202.115.32.39  * 四川省成都市 四川联合大学  * 202.175.3.3  * 澳门澳门大学  * 202.175.3.8  * 澳门澳门大学  * 202.193.64.33  * 广西桂林市 桂林电子科技大学  * 202.196.64.1  * 河南省郑州市 郑州大学  * 202.203.144.33  * 云南省昆明市 云南民族大学  * 202.203.160.33  * 云南省昆明市 昆明理工大学  * 202.203.192.33  * 云南省昆明市 云南财经大学  * 202.203.208.33  * 云南省昆明市 云南大学  * 202.203.224.33  * 云南省昆明市 云南师范大学  * 210.38.192.33  * 广东省韶关市 韶关学院</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> DNS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DNS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gvimGUI界面查找替换</title>
+      <link href="/2023/10/01/3%20(22)/"/>
+      <url>/2023/10/01/3%20(22)/</url>
+      
+        <content type="html"><![CDATA[<p>日常编程中大量的使用查找和替换，各种编辑器和IDE都对这两个功能提供了很好的支持</p><span id="more"></span><p>但是相对与GUI界面的查找替换，Vim提供的方式就显得很反直觉，古怪的命令，永远也记不住的正则表达式……<br>当然gvim也提供了一个GUI界面的查找替换，你可以在menu的Edit中找到，也可以用<code>:promptrepl</code>命令调出这个对话框，使用起来和其他编辑器没什么不同。但是这样的对话框是不符合Vim哲学的，毕竟学习反直觉的Vim，就是要在适应他的古怪后，得到效率的巨大提高，和装13时的满足感。所以还是扔掉对话框，来学习怎么用Vim的命令吧。</p><p>查找替换命令基本形式：</p><pre><code>:[range]s[ubstitute]/&#123;pattern&#125;/&#123;string&#125;/[flags] [count]  </code></pre><p>range</p><ul><li><code>[％]</code> 表示整个文件</li><li><code>[20,60]</code> 表示从20行到60行</li><li><code>[.,$]</code> 表示从当前行到文件尾</li></ul><p>option</p><ul><li><code>[g]</code> 表示替换当前行中所有的匹配</li><li><code>[c]</code> 表示替换前需要确认</li><li><code>[i]</code> 表示忽略大小写</li></ul><p>需要确认时提示输入<code>(y/n/a/q/l/^E/^Y)</code>，分别代表：</p><ul><li><code>y</code> = Yes</li><li><code>n</code> = No</li><li><code>a</code> = all</li><li><code>q</code> = quit(停止替换)</li><li><code>l</code> = last(替换当前match, 停止剩下的替换操作)</li><li><code>^E</code> = Ctrl-e(向上滚动屏幕)</li><li><code>^Y</code> = Ctrl-y(向下滚动屏幕)</li></ul><h3 id="几个例子">几个例子</h3><ol><li><p><code>:%s/old-text/new-text/gc</code><br>用new-text替换文件中所有的old-text, 每次替换前需要用户确认，</p></li><li><p><code>:%s/\&lt;old-word\&gt;/new-word/g</code><br>匹配整个单词并替换。当然使用正则表达式，你可以实现更多复杂的匹配</p></li><li><p><code>:%s//new-text/g</code><br>根据上一次的查找模式匹配并替换为new-text</p></li><li><p><code>:%s/old-text/&lt;c-r&gt;&lt;c-w&gt;/g</code><br>将所有的old-text替换为当前光标下的word</p></li><li><p><code>:%s/old-text/&lt;c-r&gt;&lt;c-a&gt;/g</code><br>将所有的old-text替换为当前光标下的WORD（两个空格间的所有字符）</p></li><li><p><code>:%s/old-text/&lt;c-r&gt;a/g</code><br>将所有的old-text替换为寄存器a当中的内容</p></li><li><p><code>:%s//&lt;c-r&gt;//g</code><br>这里<code>&lt;c-r&gt;/</code>会把上次的查找模式展开，用户可以在此之上进行修改，然后再进行替换</p></li><li><p><code>:%s/old-text/&lt;c-r&gt;*/g</code><br>将所有的old-text替换为系统剪切板当中的内容</p></li></ol><h3 id="少量替换的推荐方法">少量替换的推荐方法</h3><p>其实很多时候可能仅仅需要对几个变量做更改，范围不大，调用这么销魂的命令明显得不偿失。这种情况下，最快捷的方法还是将光标移动到要修改的变量名前（最好是通过search），<code>cw</code>键入新的变量名<code>Esc</code>，然后<code>n</code>跳转到下一个match，然后<code>.</code>重复替换操作……</p><h3 id="多个文件或者全工程下的查找替换">多个文件或者全工程下的查找替换</h3><p>Vim是没有工程的概念的，他的所有操作都是基于buffer(或者叫文件)的，要针对整个工程下的文件执行替换非常的不方便。如果执行大面积的重构等操作，我推荐过的[EasyGrep](/2013/08/25/vim-<br>plugin-easy-grep/)正是不二之选。</p><p>当然如果你对Vim命令情有独钟，下面的命令一样解决问题<br><code>:bufdo %s/pattern/replace/ge | update</code><br>针对所有的buffer(所有打开的文件)进行替换。还有更狠的：</p><pre><code>:arg *.cpp #当前路径下的所有cpp文件  :argadd *.h #加上所有h头文件  :argdo %s/pattern/replace/ge | update#对arg中定义的所有文件执行替换操作   </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> gvimGUI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> gvimGUI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Sed常用命令</title>
+      <link href="/2023/09/22/3%20(11)/"/>
+      <url>/2023/09/22/3%20(11)/</url>
+      
+        <content type="html"><![CDATA[<p>Sed常用命令列表如下：</p><span id="more"></span><p>命令   | 功能 |<br>—|—|—<br>a| 在当前行后添加一行或多行。多行时除最后一行外，每行末尾需用“\”续行 |  |<br>c| 用此符号后的新文本替换当前行中的文本。多行时除最后一行外，每行末尾需用”&quot;续行 |  |<br>i| 在当前行之前插入文本。多行时除最后一行外，每行末尾需用”&quot;续行 |  |<br>d | 删除行 |<br>h | 把模式空间里的内容复制到暂存缓冲区 |<br>H | 把模式空间里的内容追加到暂存缓冲区 |<br>g | 把暂存缓冲区里的内容复制到模式空间，覆盖原有的内容 |<br>G | 把暂存缓冲区的内容追加到模式空间里，追加在原有内容的后面 |<br>l | 列出非打印字符 |<br>p | 打印行 |<br>n | 读入下一输入行，并从下一条命令而不是第一条命令开始对其的处理 |<br>q | 结束或退出sed |<br>r | 从文件中读取输入行 |<br>! | 对所选行以外的所有行应用命令 |<br>s | 用一个字符串替换另一个 |<br>g | 在行内进行全局替换 |<br>w | 将所选的行写入文件 |<br>x | 交换暂存缓冲区与模式空间的内容 |<br>y | 将字符替换为另一字符（不能对正则表达式使用y命令） |</p><h2 id="经典用例">经典用例</h2><p>去除文本中的html tag</p><pre><code>$ echo &quot;This &lt;b&gt; is &lt;/b&gt; an &lt;i&gt;example&lt;/i&gt;.&quot; | sed -e 's/&lt;[^&gt;]*&gt;//g'   This  is  an example.  </code></pre><p>删除文件中的所有空行（与“grep ‘.’ ”效果相同）</p><pre><code>$ sed '/^$/d'  $ sed '/./!d'  </code></pre><p>在每一行后面增加一空行</p><pre><code>$ sed G  </code></pre><p>计算行数 （模拟 “wc -l”）</p><pre><code>sed -n '$='  </code></pre><p>显示文件中的前10行 （模拟“head”的行为）</p><pre><code>$ sed 10q  </code></pre><p>只显示匹配正则表达式的行（模拟“grep”）</p><pre><code>$ sed -n '/regexp/p'                 $ sed '/regexp/!d'  </code></pre><p>删除文件尾部的所有空行</p><pre><code>$ sed -e :a -e '/^\n*$/&#123;$d;N;ba' -e '&#125;'  </code></pre><p>Unix环境：转换DOS的新行符（CR/LF）为Unix格式。</p><pre><code>$ sed 's/.$//'                     # 假设所有行以CR/LF结束  $ sed 's/^M$//'                    # 在bash/tcsh中，将按Ctrl-M改为按Ctrl-V  $ sed 's/\x0D$//'                  # ssed、gsed 3.02.80，及更高版本  </code></pre><p>Unix环境：转换Unix的新行符（LF）为DOS格式。</p><pre><code>$ sed &quot;s/$/`echo -e \\\r`/&quot;        # 在ksh下所使用的命令  $ sed 's/$'&quot;/`echo \\\r`/&quot;         # 在bash下所使用的命令  $ sed &quot;s/$/`echo \\\r`/&quot;           # 在zsh下所使用的命令  $ sed 's/$/\r/'                    # gsed 3.02.80 及更高版本  </code></pre><p>DOS环境：转换Unix新行符（LF）为DOS格式。</p><pre><code>$ sed &quot;s/$//&quot;                        $ sed -n p  </code></pre><p>DOS环境：转换DOS新行符（CR/LF）为Unix格式。</p><pre><code>$ sed &quot;s/\r//&quot; infile &gt;outfile     # UnxUtils sed v4.0.7 或更高版本  $ tr -d \r &lt;infile &gt;outfile        # GNU tr 1.22 或更高版本  </code></pre><p>在每一行开头加上一个尖括号和空格（引用信息）</p><pre><code>$ sed 's/^/&gt; /'  </code></pre><p>将每一行开头处的尖括号和空格删除（解除引用）</p><pre><code>$ sed 's/^&gt; //'  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Sed </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>sublime设置同步插件</title>
+      <link href="/2023/09/14/3%20(13)/"/>
+      <url>/2023/09/14/3%20(13)/</url>
+      
+        <content type="html"><![CDATA[<p>因为经常要在windows、Linux和mac下切换工作环境，而Vim在不同平台下很难保持一致的使用体验，设置很困难，最近使用sublime的场景越来越多。</p><span id="more"></span><p>Sublime有相对方便的package安装管理方法，结合Git的版本管理，可以很简单的在不同平台下同步设置。</p><h3 id="package文件夹位置">package文件夹位置</h3><p>Sublime Text 3 中默认的package文件夹位置如下：</p><pre><code>OS X: ~/Library/Application Support/Sublime Text 3/Packages/  Windows: %APPDATA%/Roaming/Sublime Text 3/Packages/  Linux: ~/.config/sublime-text-3/Packages/  </code></pre><p>可以通过点击工具栏<code>Preferences|Browse Packages</code>选项找到文件夹位置。这里面我们感兴趣的是User文件夹。</p><h3 id="使用git同步sublime-text的设置和插件">使用git同步sublime text的设置和插件</h3><p>在github或者bitbucket或者其他git服务中创建repository, 在第一台设备上将配置文件加入git版本库。</p><pre><code>cd [package folder]/User/  git init  </code></pre><p>添加不需要同步的文件和文件夹到.gitignore</p><p>.gitignore</p><pre><code>Package Control.last-run  Package Control.ca-list  Package Control.ca-bundle  Package Control.system-ca-bundle  Package Control.cache/  Package Control.ca-certs/  </code></pre><p>提交到remote repository</p><pre><code>git add  git commit -m &quot;Initial&quot;  git remote add origin [your git repo]  git push origin master  </code></pre><p>在其他设备上或者需要重装后回复设置时，clone这个repository。</p><pre><code>cd [package folder]  mv User User.old  git clone [your git repo] User  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> sublime </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>dd命令和磁盘备份</title>
+      <link href="/2023/09/10/3%20(12)/"/>
+      <url>/2023/09/10/3%20(12)/</url>
+      
+        <content type="html"><![CDATA[<p>我们最近做的项目是和多方合作，系统依赖的很多程序和设置都来自第三方，系统的运行环境全都做在了一块硬盘里。</p><span id="more"></span><p>从我们拿到这块硬盘起系统的运行就没有正常过。经过多日的调试，可以判断出是依赖的一些库和配置文件有错误，导致软件运行异常。多次协调对方也不愿意提供更多关于修复安装和配置的信息（当然可能他们也不知道）。项目开始时没有人留意，出了事故才发现，整个项目的开发过程中，能运行系统的环境竟然在唯一的一块硬盘上。简直是这辈子最苦逼的开发体验，所有人都很重视，所有领导都每天询问，各种高级工程师秒回你的邮件。但是…但是所有的细节都是秘密，所有问实现，问原理，求指导的问题都不正面回答，要求一个纯净的可用的硬盘也没人答复，所有人都等着你探索黑盒子里的秘密……</p><p>当然我是幸运的，最后通过其他途径找到一台还能运行的旧版设备，使用硬盘对拷的办法，在一块新的硬盘上克隆了全部运行环境，基于这个环境才搭起了系统。</p><p>系统备份和恢复工具选择很多，Windows下的各种一键复原，Mac os下的高大上的Time<br>Machine，Linux下也有Clonezilla这样的全能选手。当然不求助第三方软件，最基本的linux dd<br>命令也能完成这些功能。这一次紧急情况下，正是这个在只有五寸屏的PowerPC Linux上也有的命令，救了大家一命。</p><h2 id="dd命令">dd命令</h2><p>dd是Unix/Linux下转换和复制文件的命令，名字和用法都稍显怪异，<a href="https://en.wikipedia.org/wiki/Dd_%28Unix%29">据说</a>来源于IBM的Job<br>Control Language，意为Data Description。<br>dd命令秉承Unix哲学，专注文件复制和以及复制过程中的格式转换。但是类Unix操作系统下，万物皆文件，dd命令可以像对待普通文件一样，操作硬件的设备驱动和特殊设备文件等资源，这就赋予了dd命令各种不同的用途：驱动器性能测试，数据恢复，磁盘擦除，修复引导记录……</p><h2 id="磁盘备份">磁盘备份</h2><p>使用fdisk 先查看磁盘分区，找到硬盘的位置。</p><pre><code>sudo  fdisk -u -l  </code></pre><p>我的情况是需要用一块硬盘完全克隆另一块，只需要指明输入输出的硬盘文件路径就可以了</p><pre><code>sudo dd if=/dev/sda of=/dev/sdb</code></pre><p>也可以将磁盘备份到image文件。需要注意的是，dd命令是按照文件块操作，如果不指明块的大小和数量，dd命令会对全部硬盘进行复制，并不会跳过磁盘未使用的空间。一定要确保目标文件比原来的磁盘文件大。</p><pre><code>sudo dd if=/dev/sda of=~/disk1.img  </code></pre><p>一般情况下，对image文件压缩是更有效的方法。大部分压缩算法会把空白部分完全压缩，只留下标记，对只使用了很少的磁盘文件，可以得到很好的压缩比。</p><pre><code>sudo dd if=/dev/sda | gzip &gt; disk.img.gz  sudo dd if=/dev/sda | bzip2 &gt; disk.img.bz2  </code></pre><p>需要恢复时，一样的解压拷贝</p><pre><code>gzip -dc /disk.img.gz | dd of=/dev/sda  </code></pre><h2 id="显示dd进度">显示dd进度</h2><p>dd命令执行相当的耗时，我100G的硬盘大概用了2个小时，期间dd进程并不反馈任何信息，对用户来说是相当痛苦的等待。其实查看dd的help信息，可以发现如果dd进程收到SIGSUR1<br>signal，就会在console打印出dd的当前状态，help中也给出了示例的脚本。</p><pre><code>$ dd --help  ......  Note that sending a SIGUSR1 signal to a running `dd' process makes it  print to standard error the number of records read and written so far,  then to resume copying.      $ dd if=/dev/zero of=/dev/null&amp; pid=$!    $ kill -USR1 $pid; sleep 1; kill $pid    10899206+0 records in    10899206+0 records out  ......  </code></pre><p>如果要定时更新状态，可以配合watch命令</p><pre><code>sudo watch -n 5 pkill -USR1 ^dd$  </code></pre><p>每隔5秒钟打印dd的信息。</p><pre><code>208485885+0 records in  208485884+0 records out  106744772608 bytes transferred in 9456.434242 seconds (11288057 bytes/sec)  208639230+0 records in  208639229+0 records out  106823285248 bytes transferred in 9461.445863 seconds (11290376 bytes/sec)  208763265+0 records in  208763264+0 records out  106886791168 bytes transferred in 9466.455442 seconds (11291110 bytes/se  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vagrant使用指南</title>
+      <link href="/2023/08/23/3%20(10)/"/>
+      <url>/2023/08/23/3%20(10)/</url>
+      
+        <content type="html"><![CDATA[<p>万万没想到，有一天也会沦落到在一台4G内存的Win7笔记本上搞linux编程，还我的16核Z600……好吧，抱怨也是没有用的，和销售人员一样型号的13寸笔记本，标志着我的coding生涯从此全面进入虚拟机和SSH时代。</p><span id="more"></span><p>先不说外接键盘、鼠标、显示器的酸爽，作为开发编译环境的虚拟机就是个问题。放在某个server上，锁在大楼的某处，感觉蛮牢。直到一次急等着release一个feature时怎么也连不上，跑去一看，那台server已经被人大卸八块了……幸好最后装上还能用，着实惊出一身冷汗。这件事提醒我真的需要好好考虑怎么将开发环境管理好，减少重新配置环境的开销和风险，甚至为整个团队构建更高效的开发和测试环境，提高团队效率……</p><p>解放生产力的共产主义理想先不说，说起虚拟机的设置、部署和迁移，vagrant是鼎鼎大名了。按照<a href="https://www.vagrantup.com/">官网</a>的描述，vagrant是用于创建和配置轻量级、可复用、跨平台的开发环境的工具。</p><h2 id="vagrant的主要特点">vagrant的主要特点</h2><ol><li>支持多个虚拟化工具，良好的跨平台性能。vagrant支持VirtualBox, Hyper-V, VMware和Docker等虚拟化工具，用户也可以定制provider。</li><li>提供可配置的虚拟机管理方法。Vagrant的配置文件，使用Ruby的语法描述。通过定义Vagrantfile，可以对虚拟机的网络设置、共享文件、端口转发、内存、CPU等进行定制，通过vagrantfile就可以方便进行部署和迁移。</li><li>提供了基于标准box定制的privisioning机制。</li><li>便利的打包和分发过程。vagrant 提供了高效的打包（box）和分享帮助，提供了注册官方的<a href="https://atlas.hashicorp.com/">box repository</a>，用户也可以架设自己的分享服务。</li></ol><h2 id="安装使用">安装使用</h2><p>vagrant安装过程相当的简便，windows, linux和mac<br>os上都有一键式<a href="https://www.vagrantup.com/downloads.html">安装包</a>。主要操作也非常简单，可以参考[官方教程](<a href="https://www.vagrantup.com/docs/getting-">https://www.vagrantup.com/docs/getting-</a><br>started/)。</p><pre><code>agrant box add # 添加box的操作  vagrant init  # 初始化  vagrant up  # 启动虚拟机  vagrant halt  # 关闭虚拟机  vagrant reload  # 重启虚拟机  vagrant ssh  # SSH 至虚拟机  vagrant status  # 查看虚拟机运行状态  vagrant destroy # 销毁当前虚拟机  </code></pre><h2 id="共享文件的链接问题">共享文件的链接问题</h2><p>如果单机使用，vagrant可以很方便的映射好共享文件夹。但是由于不同文件系统的原理和功能有差异，这个共享文件有时还是会遇到一些麻烦的。比如在windows上安装vagrant管理多个linux的Vitrualbox虚拟机，如果在linux虚拟机中操作共享文件夹，因为windows操作系统不支持linux一样的软连接，就可能遇到文件链接的错误。下面就是npm在安装node.js包时遇到的错误：</p><pre><code>npm ERR! Error: UNKNOWN, symlink '../which/bin/which'  npm ERR! If you need help, you may report this log at:  npm ERR!     &lt;http://github.com/isaacs/npm/issues&gt;  </code></pre><p>解决这个问题可以给npm加上参数<code>npm install --no-bin- links</code>，也可以在vagrant配置中修改provider参数，然后重启vagrant。这里注意需要在windows用 <strong>管理员权限</strong><br>启动vagrant。</p><pre><code>config.vm.provider &quot;virtualbox&quot; do |v|      v.customize [&quot;setextradata&quot;, :id, &quot;VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant&quot;, &quot;1&quot;]  end  </code></pre><h2 id="Vagrantfile文件示例">Vagrantfile文件示例</h2><pre><code># -*- mode: ruby -*-  # vi: set ft=ruby :    # All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure  # configures the configuration version (we support older styles for  # backwards compatibility). Please don't change it unless you know what  # you're doing.  Vagrant.configure(2) do |config|    # Every Vagrant development environment requires a box. You can search for    # boxes at https://atlas.hashicorp.com/search.    config.vm.box = &quot;ubuntu/trusty64&quot;      # config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080    config.vm.network :forwarded_port, guest: 4000, host: 40000         config.vm.provider &quot;virtualbox&quot; do |vb|          # Display the VirtualBox GUI when booting the machine           #vb.gui = true          vb.customize [&quot;setextradata&quot;, :id, &quot;VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root&quot;, &quot;1&quot;]          vb.customize [&quot;setextradata&quot;, :id, &quot;VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root&quot;, &quot;1&quot;]          vb.customize [&quot;setextradata&quot;, :id, &quot;VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant&quot;, &quot;1&quot;]         # Customize the amount of memory on the VM:          vb.memory = &quot;1024&quot;        end </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vagrant </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>变参模板Variadic Templates</title>
+      <link href="/2023/08/08/3%20(24)/"/>
+      <url>/2023/08/08/3%20(24)/</url>
+      
+        <content type="html"><![CDATA[<p>变参模板(VariadicTemplates)顾名思义就是参数类型和个数可以改变的模板。</p><span id="more"></span><pre><code>//定义  template&lt;typename... Arguments&gt;  class VariadicTemplate;  //实例化的方法  VariadicTemplate&lt;double, float&gt; instance;  VariadicTemplate&lt;bool, unsigned short int, long&gt; instance;  VariadicTemplate&lt;char, std::vector&lt;int&gt;, std::string, std::string, std::vector&lt;long long&gt;&gt; instance;  //参数个数甚至可以为0  VariadicTemplate&lt;&gt; instance;    //变参模板函数  template&lt;typename... Arguments&gt;  void SampleFunction(Arguments... parameters);  //使用  SampleFunction&lt;int, int&gt;(16, 24);  SampleFunction&lt;std::string&gt;(&quot;fun&quot;);  </code></pre><p>有人要问了这个省略号C语言里就有嘛，printf不就是不定参数的嘛。但是…但是，变参模板是类型安全的，而且它可以让类似功能的实现得到极大简化。[这篇文章](<a href="http://www.generic-/">http://www.generic-</a><br>programming.org&#x2F;~dgregor&#x2F;cpp&#x2F;variadic-<br>templates.html)就介绍了一个用变参模板实现的非常精巧的类型安全的printf,<br>还简要的说明了C++11引入这个特性的动机。我对模板元编程不甚了解，但是从大牛们用奇淫技巧实现的boost::mpl和boost::tuple来模拟可变参数模板，不难看出这个功能对编写C++库的重要性。当然如果<a href="http://en.wikipedia.org/wiki/Concepts_%28C%2B%2B%29">Concepts</a>不被[移出C++11标准](<a href="http://www.drdobbs.com/cpp/the-c0x-remove-">http://www.drdobbs.com/cpp/the-c0x-remove-</a><br>concepts-<br>decision&#x2F;218600111?pgno&#x3D;1)，C++泛型能力会有翻天覆地的提高，不管怎样，C++11在语言层级增加了对变参模板支持，还是极大的增强了C++模板的抽象能力。</p><p>##std::tuple<br>对于大多数程序员来说可能很少去编写模板库，但是新的可变参数的容器std::tuple大多数都会用到。tuple就是一个包含任意多个不同类型的数据成员的集合，就像一个增强版的std::pair。直接贴出一些用例，细节参照<a href="http://en.cppreference.com/w/cpp/utility/tuple">手册</a>。</p><pre><code>// tuple example  #include &lt;iostream&gt;     // std::cout  #include &lt;tuple&gt;        // std::tuple, std::get, std::tie, std::ignore    int main ()  &#123;    std::tuple&lt;int,char&gt; foo (10,&#39;x&#39;);    auto bar = std::make_tuple (&quot;test&quot;, 3.1, 14, &#39;y&#39;);      std::get&lt;2&gt;(bar) = 100;                                    // access element      int myint; char mychar;      std::tie (myint, mychar) = foo;                            // unpack elements    std::tie (std::ignore, std::ignore, myint, mychar) = bar;  // unpack (with ignore)      mychar = std::get&lt;3&gt;(bar);      std::get&lt;0&gt;(foo) = std::get&lt;2&gt;(bar);    std::get&lt;1&gt;(foo) = mychar;      std::cout &lt;&lt; &quot;foo contains: &quot;;    std::cout &lt;&lt; std::get&lt;0&gt;(foo) &lt;&lt; &#39; &#39;;    std::cout &lt;&lt; std::get&lt;1&gt;(foo) &lt;&lt; &#39;\n&#39;;      return 0;  </code></pre><p>##实际中应用<br>虽然变参模板无比拉风，但是平时编程时却不容易用到，tuple灵活强大，但是只用在函数返回值上，也未免大财小用，而且用多了会降低代码的可读性。在项目中，有需求要测试触发signal的功能，需要一个slot的mock，signal<br>可能传递不同个数不同类型的参数，终于”以权谋私”用上了Variadic Templates和tuple。</p><pre><code>template&lt;typename... Args&gt;   class SignalReceiverMock &#123;  public:    SignalReceiverMock() : _slotCalled(false) &#123;&#125;      void slot(Args... args) &#123;      _slotCalled = true;      _arguments = std::make_tuple(args...);    &#125;      bool slotCalled() &#123;      return _slotCalled;    &#125;      bool argumentsPassedCorrectly(Args... args) &#123;      auto arguments = std::make_tuple(args...);       return arguments == _arguments;    &#125;    private:    bool _slotCalled;    std::tuple&lt;Args...&gt; _arguments;  &#125;;    //在测试中使用  SignalReceiverMock&lt;std::string, int&gt; receiver1;  SignalReceiverMock&lt;&gt; receiver2;  Signal1 signal1(&quot;test&quot;, 0); // singal1 有传递两个参数  Signal2 signal2(); //signal2 不传递参数  signal1.connect(boost::bind(&amp;SignalReceiverMock&lt;std::string, int&gt;::slot, *receiver1, _1, _2));  signal2.connect(boost::bind(&amp;SignalReceiverMock&lt;&gt;::slot, *receiver2));  ....//触发signal的操作  testResult.asserTrue(receiver1.slotCalled() &amp;&amp; receiver1.argumentsPassedCorrectly(&quot;test&quot;, 0));  testResult.asserTrue(receiver2.slotCalled());  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Variadic Templates </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Variadic Templates </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>gh-proxy两种部署方式</title>
+      <link href="/2023/07/28/2%20(18)/"/>
+      <url>/2023/07/28/2%20(18)/</url>
+      
+        <content type="html"><![CDATA[<p>gh-proxy是一个加速github release、archive以及项目文件的项目，支持clone下面本文介绍两种部署方式</p><span id="more"></span><h3 id="方式一：cf-worker版本部署">方式一：cf worker版本部署</h3><p><strong>推荐</strong> ，无成本可以白嫖，虽然普通用户有限制，限制如下，看不懂别管，反正足够用了</p><p>bujj的演示站（请尽量自建）：<a href="https://iacc.eu.org/">https://iacc.eu.org/</a>，可以点进去填入链接使用，也可以直接跟上你需要下载的链接进行下载</p><p><a href="https://img.bujj.org/202204202237811.png"><img src="https://img.bujj.org/202204202237811.png" alt=""></a></p><p>首页：<a href="https://workers.cloudflare.com/">https://workers.cloudflare.com</a></p><p>注册，登陆，<code>Start building</code>，设置一个<code>服务名称</code><br>（其下方会显示为：<code>您的服务将被部署到：https://服务名称.iacc.workers.dev</code> ），其他都默认，点<code>创建服务</code>。</p><p>点快速编辑，复制下方的代码替换左侧代码框里的内容，<code>保存并部署</code>，打开上一步的网址能看到页面，就说明搭建成功了</p><pre><code> * 'use strict'  *   * /**  *  * static files (404.html, sw.js, conf.js)  *  */  * const ASSET_URL = 'https://hunshcn.github.io/gh-proxy/'  * // 前缀，如果自定义路由为example.com/gh/*，将PREFIX改为 '/gh/'，注意，少一个杠都会错！  * const PREFIX = '/'  * // 分支文件使用jsDelivr镜像的开关，0为关闭，默认关闭  * const Config = &#123;  *     jsdelivr: 0  * &#125;  *   * const whiteList = [] // 白名单，路径里面有包含字符的才会通过，e.g. ['/username/']  *   * /** @type &#123;RequestInit&#125; */  * const PREFLIGHT_INIT = &#123;  *     status: 204,  *     headers: new Headers(&#123;  *         'access-control-allow-origin': '*',  *         'access-control-allow-methods': 'GET,POST,PUT,PATCH,TRACE,DELETE,HEAD,OPTIONS',  *         'access-control-max-age': '1728000',  *     &#125;),  * &#125;  *   *   * const exp1 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:releases|archive)\/.*$/i  * const exp2 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:blob|raw)\/.*$/i  * const exp3 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:info|git-).*$/i  * const exp4 = /^(?:https?:\/\/)?raw\.(?:githubusercontent|github)\.com\/.+?\/.+?\/.+?\/.+$/i  * const exp5 = /^(?:https?:\/\/)?gist\.(?:githubusercontent|github)\.com\/.+?\/.+?\/.+$/i  * const exp6 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/tags.*$/i  *   * /**  *  * @param &#123;any&#125; body  *  * @param &#123;number&#125; status  *  * @param &#123;Object&lt;string, string&gt;&#125; headers  *  */  * function makeRes(body, status = 200, headers = &#123;&#125;) &#123;  *     headers['access-control-allow-origin'] = '*'  *     return new Response(body, &#123;status, headers&#125;)  * &#125;  *   *   * /**  *  * @param &#123;string&#125; urlStr  *  */  * function newUrl(urlStr) &#123;  *     try &#123;  *         return new URL(urlStr)  *     &#125; catch (err) &#123;  *         return null  *     &#125;  * &#125;  *   *   * addEventListener('fetch', e =&gt; &#123;  *     const ret = fetchHandler(e)  *         .catch(err =&gt; makeRes('cfworker error:\n' + err.stack, 502))  *     e.respondWith(ret)  * &#125;)  *   *   * function checkUrl(u) &#123;  *     for (let i of [exp1, exp2, exp3, exp4, exp5, exp6]) &#123;  *         if (u.search(i) === 0) &#123;  *             return true  *         &#125;  *     &#125;  *     return false  * &#125;  *   * /**  *  * @param &#123;FetchEvent&#125; e  *  */  * async function fetchHandler(e) &#123;  *     const req = e.request  *     const urlStr = req.url  *     const urlObj = new URL(urlStr)  *     let path = urlObj.searchParams.get('q')  *     if (path) &#123;  *         return Response.redirect('https://' + urlObj.host + PREFIX + path, 301)  *     &#125;  *     // cfworker 会把路径中的 `//` 合并成 `/`  *     path = urlObj.href.substr(urlObj.origin.length + PREFIX.length).replace(/^https?:\/+/, 'https://')  *     if (path.search(exp1) === 0 || path.search(exp5) === 0 || path.search(exp6) === 0 || path.search(exp3) === 0 || path.search(exp4) === 0) &#123;  *         return httpHandler(req, path)  *     &#125; else if (path.search(exp2) === 0) &#123;  *         if (Config.jsdelivr) &#123;  *             const newUrl = path.replace('/blob/', '@').replace(/^(?:https?:\/\/)?github\.com/, 'https://cdn.jsdelivr.net/gh')  *             return Response.redirect(newUrl, 302)  *         &#125; else &#123;  *             path = path.replace('/blob/', '/raw/')  *             return httpHandler(req, path)  *         &#125;  *     &#125; else if (path.search(exp4) === 0) &#123;  *         const newUrl = path.replace(/(?&lt;=com\/.+?\/.+?)\/(.+?\/)/, '@$1').replace(/^(?:https?:\/\/)?raw\.(?:githubusercontent|github)\.com/, 'https://cdn.jsdelivr.net/gh')  *         return Response.redirect(newUrl, 302)  *     &#125; else &#123;  *         return fetch(ASSET_URL + path)  *     &#125;  * &#125;  *   *   * /**  *  * @param &#123;Request&#125; req  *  * @param &#123;string&#125; pathname  *  */  * function httpHandler(req, pathname) &#123;  *     const reqHdrRaw = req.headers  *   *     // preflight  *     if (req.method === 'OPTIONS' &amp;&amp;  *         reqHdrRaw.has('access-control-request-headers')  *     ) &#123;  *         return new Response(null, PREFLIGHT_INIT)  *     &#125;  *   *     const reqHdrNew = new Headers(reqHdrRaw)  *   *     let urlStr = pathname  *     let flag = !Boolean(whiteList.length)  *     for (let i of whiteList) &#123;  *         if (urlStr.includes(i)) &#123;  *             flag = true  *             break  *         &#125;  *     &#125;  *     if (!flag) &#123;  *         return new Response(&quot;blocked&quot;, &#123;status: 403&#125;)  *     &#125;  *     if (urlStr.startsWith('github')) &#123;  *         urlStr = 'https://' + urlStr  *     &#125;  *     const urlObj = newUrl(urlStr)  *   *     /** @type &#123;RequestInit&#125; */  *     const reqInit = &#123;  *         method: req.method,  *         headers: reqHdrNew,  *         redirect: 'manual',  *         body: req.body  *     &#125;  *     return proxy(urlObj, reqInit)  * &#125;  *   *   * /**  *  *  *  * @param &#123;URL&#125; urlObj  *  * @param &#123;RequestInit&#125; reqInit  *  */  * async function proxy(urlObj, reqInit) &#123;  *     const res = await fetch(urlObj.href, reqInit)  *     const resHdrOld = res.headers  *     const resHdrNew = new Headers(resHdrOld)  *   *     const status = res.status  *   *     if (resHdrNew.has('location')) &#123;  *         let _location = resHdrNew.get('location')  *         if (checkUrl(_location))  *             resHdrNew.set('location', PREFIX + _location)  *         else &#123;  *             reqInit.redirect = 'follow'  *             return proxy(newUrl(_location), reqInit)  *         &#125;  *     &#125;  *     resHdrNew.set('access-control-expose-headers', '*')  *     resHdrNew.set('access-control-allow-origin', '*')  *   *     resHdrNew.delete('content-security-policy')  *     resHdrNew.delete('content-security-policy-report-only')  *     resHdrNew.delete('clear-site-data')  *   *     return new Response(res.body, &#123;  *         status,  *         headers: resHdrNew,  *     &#125;)  * &#125;  * </code></pre><p><code>index.js</code>默认配置下项目文件会走jsDelivr，如需走worker，修改Config变量即可</p><p><code>ASSET_URL</code>是静态资源的url（实际上就是现在显示出来的那个输入框单页面）</p><p><code>PREFIX</code>是前缀，默认（根路径情况为&quot;/&quot;），<a href="http://xn--example-e73kkez26jqdf625bs50bzhzb1xzb.com/gh/*%EF%BC%8C%E8%AF%B7%E5%B0%86PREFIX%E6%94%B9%E4%B8%BA">如果自定义路由为example.com/gh/*，请将PREFIX改为</a><br>‘/gh/’，注意，少一个杠都会错！</p><p>Tips：如果你需要绑定自己的域名，这需要先将域名绑定到cf，然后解析你想要的A记录，开启小云朵，最后去workers里按规则添加路由就完成了，这样就能通过你自己的域名访问了。</p><h3 id="方式二：Python版本部署（适合爱发电、引流的人士）">方式二：Python版本部署（适合爱发电、引流的人士）</h3><p>可以选用Docker部署，10086是外部端口，也即访问时候的端口，需要别的端口，修改它就是了</p><pre><code>  * docker run -d --name=&quot;gh-proxy-py&quot; \  *   -p 0.0.0.0:10086:80 \  *   --restart=always \  *   hunsh/gh-proxy-py:latest</code></pre><p>也可以直接部署，需要具备Python3环境</p><p>安装依赖，按需求修改<code>app/main.py</code>的前几项配置即可</p><pre><code>* pip install flask requests</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>阿里云免费企业邮箱</title>
+      <link href="/2023/07/23/2%20(16)/"/>
+      <url>/2023/07/23/2%20(16)/</url>
+      
+        <content type="html"><![CDATA[<p>阿里云企业邮箱，每个阿里云账号都可以开通一个免费版的企业邮箱，这是非常好的，收发信功能方面都很完美，但是它的发信数量官方并未公布，有点奇怪。</p><span id="more"></span><p>首先呢，要注册一个阿里云账号并实名：<a href="https://www.aliyun.com/minisite/goods?userCode=c03t86yc&amp;share_source=copy_link">阿里云aff链接</a></p><p>然后呢，你会发现，找不到免费版的入口，哈哈，阿里云把入口隐藏了，免费版的入口如下（回复后等通过即可，下回直接就能看到了）：</p><p>__此处内容需要回复后才能查看</p><p><a href="https://img.bujj.org/202205180218355.png"><img src="https://img.bujj.org/202205180218355.png" alt=""></a></p><p>购买时长默认就行，反正到期自动续订的！</p><p>购买完成后，阿里云的企业邮箱就开通成功了，下面该来配置域名的dns解析啦</p><h3 id="配置域名解析">配置域名解析</h3><p>进入阿里云企业邮箱管理控制台：<a href="https://alimail.console.aliyun.com">https://alimail.console.aliyun.com</a></p><p>点自己域名，设置解析，按它要求一条一条解析好<br>点刷新状态，若<code>当前解析状态</code> 的结果显示的是<code>解析已生效</code> ，则代表设置成功</p><p>重新回到阿里云企业邮箱管理控制台，就能看到名为<code>postmaster@你的域名</code> 的管理员账号，密码自己设置一下</p><p>登录地址：<a href="https://qiye.aliyun.com/?userCode=c03t86yc">阿里邮箱企业版</a>，账号密码就是上一步的管理员账号和密码（准确来说，管理员和子账号都在这里登录），登录会提示设置安全问题，绑定安全手机号可以跳过（安全手机号的作用是：异地登录发短信提醒你）</p><p>分配子用户的地方：左侧边栏，员工账号管理</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Pimpl模式</title>
+      <link href="/2023/07/19/3%20(25)/"/>
+      <url>/2023/07/19/3%20(25)/</url>
+      
+        <content type="html"><![CDATA[<p>C+＋的Pimpl惯用法或者说Pimpl模式，又被称为编译防火墙，是一种在头文件中隐藏实现的方式</p><span id="more"></span><p>Pimpl很古老，可能在标准C+＋诞生之前就有了这种用法，其间争论也早已尘埃落定，用和不用各有利弊，主要还是看组织内部的规范和项目的需要。最近Team一直同时在两个subsystem下工作，两个subsystem的code<br>base一个用了Pimpl一个没有用，是以在Team中产生了到底要不要用的争论。虽然SA的决定是维持现状，但还是总结下Pimpl的相关知识，以备参考。</p><p>Pimpl 没有固定的形式，有的很复杂，如Qt中的private class和D-Pointer的结构。而Team在项目中用到的相对很简单，只是一个智能指针加一个Inner Class, 基本结构如下。</p><pre><code>// Foo.h    class Foo &#123;  public:    Foo();    virtual ~Foo();  private:    class Pimpl;    boost::scoped_ptr&lt;Pimpl&gt; _pimpl;  &#125;;    // Foo.cpp  class Foo::Pimpl &#123;  public:    // data or functions  &#125;    Foo::Foo() : _pimpl(new Pimpl) &#123;&#125;    Foo::~Foo() &#123;&#125;  </code></pre><p>使用这种结构的好处：</p><ol><li>成员变量的修改不会影响类的头文件，避免重新编译所有inclue类头文件的模块</li><li>类的头文件不需要include 成员变量的头文件，减少编译依赖，加快编译速度</li><li>更好的封装类的实现细节</li></ol><p>而相应的缺点：</p><ol><li>增加了代码复杂度</li><li>造成代码可读性下降</li><li>由于指针间接调用造成的性能下降</li></ol><p>至于要不要使用Pimpl,<br>要视情况而定。如果你的工程更注重减少依赖，隐藏实现，Pimpl正适合你。相反如果你的工程中的类含有很多虚函数，又会被大量调用，最好考虑下Pimpl会不会带来性能问题。最近就遇到一个例子，一个库和Qt有冲突，在moc<br>class的头文件中inclue这个库的头文件就会有编译问题。最后就是用Pimpl的方法解决了头文件的依赖。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Pimpl </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Pimpl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>WSL上安装 Docker</title>
+      <link href="/2023/07/05/3%20(1)/"/>
+      <url>/2023/07/05/3%20(1)/</url>
+      
+        <content type="html"><![CDATA[<p>在配置好了WLS后，最近慢慢的把以前在虚拟机上开发的项目都移到了WSL上，一切都像在原生的ubuntu下一样，只有一个用到docker的项目遇到了波折</p><span id="more"></span><h2 id="Docker-on-WSL">Docker on WSL</h2><p>由于WSL 还不支持linux kernel的一些特性，在WSL下可以安装docker，但是 docker engine<br>的运行会有问题。Github和微软的feedback页面上有不少人都提出过这个问题<br>[[1]](<a href="https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-">https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-</a><br>on-ubuntu-on-windo/suggestions/13250370-docker?page=3&amp;per_page=20)<br><a href="https://github.com/Microsoft/WSL/issues/964">[2]</a><br><a href="https://github.com/Microsoft/WSL/issues/1854">[3]</a>，但是WSL团队都没什么正面回答。能找到的就是WSL的PM、大帅哥<a href="https://www.linkedin.com/in/jack-hammons-a609a649/">Jack<br>Hammons</a>在Microsoft Build<br>2017上的回答提问时的一段话。</p><p>简单来说就是因为docker依赖的linux<br>kernel特性过于复杂，在近期很难解决这个问题。虽说WSL团队对全面支持docker不乐观，但是工作却是没少做，已经<a href="https://www.reddit.com/r/bashonubuntuonwindows/comments/8cvr27/docker_is_running_natively_on_wsl/">有人</a>在最新的1803版本上成功的运行了docker<br>daemon。但是一些功能比如docker compose，还是不能运行，我自己也试了正在使用的docker<br>image，会有比较奇怪的错误。所以还是决定使用现在证实有效的workaround：安装docker for windows,<br>然后在wsl下通过docker machine连接和操作windows下的docker engine。</p><h2 id="Docker-on-Windows-for-WSL">Docker on Windows for WSL</h2><h3 id="在WSL上安装-Docker-CLI">在WSL上安装 Docker CLI</h3><p>Ubuntu上默认的apt<br>repository中docker版本都比较旧，可以按照[官方安装文档](<a href="https://docs.docker.com/install/linux/docker-">https://docs.docker.com/install/linux/docker-</a><br>ce/ubuntu/)添加docker官方repository安装最近版本Docker CE。</p><h3 id="安装设置Docker-CE-for-Windows">安装设置Docker CE for Windows</h3><p>较老版本的Docker是通过<a href="https://docs.docker.com/toolbox/overview/">Docker<br>Toolbox</a>在windows上运行的，本质上还是通过virtual<br>box运行。现在版本的[Docker CE](<a href="https://store.docker.com/editions/community/docker-ce-">https://store.docker.com/editions/community/docker-ce-</a><br>desktop-windows)是基于windows 10 原生的Hyper-V虚拟化技术的，相比docker<br>toolbox速度和易用性上面好了很多，在官网下载安装包按照提示就可以完成安装。要在WSL中访问windows docker daemon,<br>还需要在Docker设置中打开TCP端口。</p><h3 id="在WSl中设置docker-host">在WSl中设置docker host</h3><p>最后把WSL中的DOCKER_HOST变量的设置添加到.bashrc中</p><pre><code>export DOCKER_HOST=localhost:2375  </code></pre><p>由于wsl默认把磁盘mount到/mnt下，比如/mnt/c/your/folder，而Docker for<br>Windows期望本地的文件路径是/c/your/folder，所以运行<code>docker run -v /mnt/c/your/folder:/folder ...</code> 会报错。这个问题可以在/etc/wsl.conf中修改automount的root解决。</p><pre><code>[automount]  enabled = true  root = /  options = &quot;metadata,umask=22,fmask=11&quot;  mountFsTab = false  </code></pre><p>完成这些设置以后在WSl中已经可以使用docker了。</p><p>虽然以后大部分开发会在WSL中做，但是有些代码维护的工作还是需要打开虚拟机的。这时如果试图打开vmware 或者virtual<br>box虚拟机的话，就会发现类似下面的错误。</p><p>根本原因是windows的Hyper-V和其他虚拟机对系统特性的设置不兼容，网上有很多人给出的解决方法都是关掉Hyper-V。但是关掉Hyper-<br>V就没法使用docker了，只能在docker和虚拟机之间二选一。要切换docker和虚拟机就需要每次手动设置Hyper-V，还要重启windows，真是相当麻烦。现在能找到的最好的方法可能是：添加一个没有Hyper-<br>V的windows启动项，如果临时需要虚拟机，就重启并用它启动windows。</p><h3 id="Boot-without-Hyper-V">Boot without Hyper-V</h3><p>复制当前的启动设置，命名为“Windows 10 (No Hyper-V)”</p><pre><code>C:\&gt;bcdedit /copy &#123;current&#125; /d &quot;Windows 10 (No Hyper-V)&quot;   The entry was successfully copied to &#123;ff-23-113-824e-5c5144ea&#125;.   </code></pre><p>修改这个新的启动设置，在启动时关闭Hyper-V。</p><pre><code>C:\&gt;bcdedit /set &#123;ff-23-113-824e-5c5144ea&#125; hypervisorlaunchtype off   The operation completed successfully.  </code></pre><p>在启动windows时就可以看到下面的启动选项了。</p><p>现阶段要在WSL中使用docker，可以说是相当的折腾，希望不久的将来，WSL能完全支持docker的特性。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WSL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JIRA和Bitbucket</title>
+      <link href="/2023/06/11/3%20(7)/"/>
+      <url>/2023/06/11/3%20(7)/</url>
+      
+        <content type="html"><![CDATA[<p>完成软件开发从需求管理、任务管理、测试管理、代码管理、缺陷管理、持续集成、文档管理的全流程覆盖</p><span id="more"></span><p>加入到新团队后一直着手于建立统一的标准软件流程，现有的项目因为不同BU的影响，不仅流程各不相同，使用的工具也是五花八门，所以从年初制定KPI时，不仅是制定标准的软件流程，软件开发工具的统一也是一项重要内容。经过各种讨论评估，最终决定使用JIRA和Bitbucket，后续还会有Bamboo和Confluence的加入，最终凑齐Atlasssian全家桶</p><p>经过漫长的与sourcing和IT部门的扯皮，终于采购了JIRA和Bitbucket。然后由于IT部门的不作为，所有安装、配置、管理、维护都是自己动手，项目开发的任务之外又承担了配置管理员的角色，虽然这个我这个二把刀管理员搞出来的配置非常不专业，但是因为是自己的心血，还是很有必要记录一下的。</p><h2 id="物理架构">物理架构</h2><ul><li>考虑到数据安全和扩容的可能性，JIRA和Bitbucket分别部署在不同的服务器上。</li><li>JIRA和Bitbucket服务器是由公司IT部门提供的虚拟机，提供虚拟机备份，并统一管理计算资源、IP和内部域名。</li><li>JIRA和Bitbucket邮件通知功能通过SMTP relay转发，主要是因为公司的IT策略不允许架设邮件服务，而且现有SMTP服务只能由特定IP的电脑访问，申请权限给新的IP非常繁琐。所以所有通知邮件使用部门内一台已经有权限的电脑转发。</li><li>NAS服务器在部门本地部署，主要用来存放JIRA和Bitbucket的数据备份。IT部门已经提供了虚拟机备份，但是由于多次发生虚拟机不能访问和备份丢失的情况，软件团队内部的NAS充当了最后的安全手段。NAS服务器是采购的Synology DS216se双盘位乞丐版，配备两个4T硬盘。</li><li>NAS服务器并没有使用内部的邮件服务，而是使用微软outlook邮件发送通知。主要是因为当JIRA和Bitbucket服务器发生异常时，通常公司内部的邮件服务器也无法访问，使用外部邮件能确保管理员收到报警通知。</li></ul><h2 id="软件架构">软件架构</h2><h4 id="Atlasssian服务">Atlasssian服务</h4><ul><li>JIRA和Bitbucket分别架设在两个运行CentOS 7的虚拟机上，虚拟机托管在IT部门的Hyper-V集群上。</li><li>JIRA和Bitbucket是基于JAVA开发的工具，需要部署在java容器Tomcat之上。作为生产环境，我们还配置了apache服务，做反向代理。JIRA默认使用8080端口，Bitbucket默认使用7990端口，通过apache映射到各自网址的80端口。</li><li>JIRA和Bitbucket都自带了一个H2 database, 但是在生产环境还是建议使用成熟的数据库，比较<a href="https://confluence.atlassian.com/adminjiraserver070/supported-platforms-749382629.html">JIRA支持的数据库</a>后，最后选定使用PostgreSQL 9.2。</li><li>JIRA和Bitbucket各自单独运行备份服务，通过FTP上传到NAS服务器。</li></ul><p>相关配置方法和文档：</p><ul><li><a href="https://confluence.atlassian.com/jirakb/running-jira-with-firewall-on-linux-741933610.html">Running JIRA with Firewall on Linux</a></li><li><a href="https://confluence.atlassian.com/adminjiraserver070/connecting-jira-applications-to-postgresql-749382637.html">Connecting JIRA applications to PostgreSQL</a></li><li><a href="https://confluence.atlassian.com/kb/proxying-atlassian-server-applications-with-apache-http-server-mod_proxy_http-806032611.html">Proxying Atlassian server applications with Apache HTTP Server </a></li></ul><h4 id="NAS服务">NAS服务</h4><ul><li>Synology NAS 服务器上运行了一个基于网页界面的DiskStation Manager（DSM）操作系统。DSM也是基于Linux，可以提供方便的用户管理、存储管理和计划任务等功能。</li><li>只开放了FTP服务，提供给JIRA和Bitbucket一个只有上传权限的用户来备份数据。</li></ul><p>相关配置方法和文档：</p><ul><li><a href="https://www.synology.com/zh-cn/knowledgebase/DSM/tutorial/File_Sharing/How_to_access_files_on_Synology_NAS_via_FTP">如何通过 FTP 访问 Synology NAS 中的文件</a></li><li><a href="https://www.synology.com/zh-cn/knowledgebase/DSM/help/DSM/AdminCenter/file_user_create">创建Synology用户</a></li><li><a href="https://www.synology.com/zh-cn/knowledgebase/DSM/help/DSM/AdminCenter/file_share_privilege">指派Synology共享文件夹权限</a></li></ul><h2 id="备份策略">备份策略</h2><p>JIRA和Bitbucket备份分两层：</p><ol><li>Windows Hyper-V提供的虚拟机备份，每日全盘备份，保留15天。</li><li>保存在NAS服务器上的数据备份，每个工作日备份，保留半年。</li></ol><p>JIRA和Bitbucket的数据备份的流程如上图所示：</p><ul><li>JIRA的备份主要包含两部分：数据库和数据文件夹。这里使用JIRA备份服务和pg_dump两种办法同时备份数据库，除了基于安全性的考虑，还为了照顾不同的恢复策略：pg_dump的备份更方便postgreSQL恢复数据，而JIRA备份服务产生的xml文件可以更方便的恢复到其他不同类型的数据库。</li><li>Bitbucket提供了<a href="https://confluence.atlassian.com/bitbucketserver/data-recovery-and-backups-776640050.html#Datarecoveryandbackups-Bitbucketbackupstrategies">三种不同的备份方法</a>。通过对比，根据团队实际情况，选择使用官方提供的“Bitbucket Server Backup Client”，一次就可以将数据库、代码库和相关日志等全部备份。而这种方法在速度和兼容性上的不足，在现在团队规模下，并不会构成问题。</li><li>利用DSM系统的“任务计划”功能定时运行自定义服务，定时检查JRIA和Bitbucket服务的是否在线，每日定时检查备份的完整性。</li></ul><p>相关配置方法和文档：</p><ul><li><a href="https://confluence.atlassian.com/adminjiraserver071/backing-up-data-802592964.html">Backing up JIRA data</a></li><li><a href="https://confluence.atlassian.com/adminjiraserver071/automating-jira-application-backups-802592966.html">Automating JIRA application backups</a></li><li><a href="https://confluence.atlassian.com/bitbucketserver/data-recovery-and-backups-776640050.html">Bitbucket data recovery and backups</a></li><li><a href="https://confluence.atlassian.com/bitbucketserver/using-the-bitbucket-server-backup-client-776640064.html">Using the Bitbucket Server Backup Client</a></li><li><a href="https://linux.die.net/man/1/crontab">crontab(1) - Linux man page</a></li><li><a href="https://www.synology.com/zh-cn/knowledgebase/DSM/help/DSM/AdminCenter/system_taskscheduler">Synology任务计划程序</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 测试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>头脑风暴</title>
+      <link href="/2023/05/18/3%20(8)/"/>
+      <url>/2023/05/18/3%20(8)/</url>
+      
+        <content type="html"><![CDATA[<p>头脑风暴是经常被使用的词汇，大众或多或少都知道这种讨论解决问题的方法，但是即使是在专业的项目管理者手中，头脑风暴也是经常被误用的一个工具。</p><span id="more"></span><h2 id="简介">简介</h2><p>人们经常认为自己是在进行头脑风暴，但其实他们只是在进行讨论而已，真正的头脑风暴是一个正式的过程。在参加了很多各种各样的、或好或坏的头脑风暴后，觉得有必要做些总结。</p><p>头脑风暴（Brainstorming）在<a href="https://zh.wikipedia.org/wiki/%E8%85%A6%E5%8A%9B%E6%BF%80%E7%9B%AA%E6%B3%95">维基百科</a>的定义：一种为激发创造力、强化思考力而设计出来的一种方法。此法是美国BBDO（Batten,<br>Bcroton, Durstine and Osborn）广告公司创始人亚历克斯‧奥斯本（Alex F. Osborn）于1938年首创的。</p><p>头脑风暴作为一种群体决策工具在PMBOK的多个管理过程中被推荐使用，比如：项目整合管理，范围管理，时间管理，成本管理，质量管理，风险管理等。</p><p>头脑风暴主要目标大量收集解决问题的灵感和方案。为了最大限度的激发团队的创造力和思考力，过程中提倡自由发言、畅所欲言、发散思考，鼓励互相启发和激励，禁止评论和批评。</p><h2 id="实施方法">实施方法</h2><p>头脑风暴可以是以 <em>结构化</em> 或 <em>非结构化</em> 的形式进行。废话不说，看图。</p><h3 id="结构化方式：">结构化方式：</h3><h3 id="非结构化方式：">非结构化方式：</h3><h3 id="两种方式的不同点主要在方案提出阶段：">两种方式的不同点主要在方案提出阶段：</h3><ul><li>结构化头脑风暴：团队成员要依次提出方案或提议，并循环进行。一名成员一次只能提出一条。如果轮到某位成员时，他可以选择“跳过”。这一轮跳过后，他仍然有机会在以后轮到时提出方案。当所有的成员选择“跳过”时，方案提出阶段就结束了。</li><li>非结构化头脑风暴：团队成员可以自由发言，一名成员可以连续提出方案或看法。而提案阶段只有在所有团队成员一致同意没有新的方案的时候才能结束。</li></ul><h3 id="两种方式都应该注意的要点：">两种方式都应该注意的要点：</h3><ul><li>选择参会人员应该考虑到成员在问题领域的知识背景，参会人数不宜过多。主持人最好由对决策问题的背景比较了解并熟悉头脑风暴法的处理程序和方法的人担任。</li><li>决定会议地点时需要注意选择没有干扰的地方，较少的干扰有利于把注意力高度集中到所要讨论的问题上。相对舒适和轻松的环境更能激发自由活跃的气氛。</li><li>会议的目标应该明确定义，主持人应该在会议过程中防止议题偏离目标。</li><li>提出方案或主意的过程中，不允许任何形式的指责、澄清、排序或讨论，所有的提议都要又记录员记录在黑板或白纸上。</li><li>头脑风暴产出结果应该是一张汇总了可用于解决问题的各种主意的清单。该清单应该是经过仔细评审并删除了重复内容的最后清单。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 其他 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 其他 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Shell脚本参数文档</title>
+      <link href="/2023/04/28/3%20(9)/"/>
+      <url>/2023/04/28/3%20(9)/</url>
+      
+        <content type="html"><![CDATA[<p>编写Shell脚本的过程中，经常会和文件名和文件路径打交道</p><span id="more"></span><h2 id="截取文件名和后缀">截取文件名和后缀</h2><p>如果用户输入了一个文件的全名（可能包含绝对路径和文件后缀），如何得到文件的路径名，文件名，文件后缀这些信息呢。Shell脚本拥有强大的字符串处理能力，如果把文件名当做字符串，我们不难使用cut或sed这样的工具得到我们想要的结果。</p><pre><code>$fullfile=/the/path/foo.txt  $fullname=$(basename $fullfile)  $dir=$(dirname $fullfile)  $filename=$(echo $fullname | cut -d . -f1)  $extension=$(echo $fullname | cut -d . -f2)  $ echo $dir , $fullname , $filename , $extension  /the/path , foo.txt , foo , txt  </code></pre><p>这里使用<a href="http://pubs.opengroup.org/onlinepubs/007908799/xcu/basename.html">basename</a>命令可以直接得到包含后缀的文件名，而<a href="http://pubs.opengroup.org/onlinepubs/007908799/xcu/dirname.html">dirname</a>命令可以得到路径名，然后就能简单的用cut截取文件名和后缀名。</p><h2 id="更复杂的情况">更复杂的情况</h2><p>如果对付简单应用场景，到这里已经可以打完收工了，但是有时候文件可能不止有一个后缀，比如*.tar.gz，怎样得到最后一个后缀呢？再cut一回？当然可以，但是如果文件名是mylib.1.0.1a.zip这样的呢？呃……正则表达式肯定可以。</p><pre><code>$ fullname=mylib.1.0.1a.zip  $ filename=$(echo $fullname | sed 's/\.[^.]*$//')  $ extension=$(echo $fullname | sed 's/^.*\.//')  $ echo $filename, $extension  mylib.1.0.1a, zip  </code></pre><p>这里面的逻辑是这样的：</p><ul><li>文件名：把以<code>.</code>字符开头以后一直到行尾都是非<code>.</code>字符的子串替换为空。</li><li>后缀名：把从行首开始以<code>.</code>字符结尾的子串替换为空。</li></ul><p>光用语言把这两个正则表达式描述出来脑细胞也要死不少。有没有像上面cut版本一样简单容易理解的方法呢？由于<code>.</code>分隔符的个数不确定，正常使用cut来分割最后一个<code>.</code>字符是不太可能的。但是我们可使用<a href="http://man7.org/linux/man-pages/man1/rev.1.html">rev</a><br>命令将字符串反转一下，区分后缀和文件名的<code>.</code>字符位置就确定了。截取了想要的部分之后，再次反转就得到了我们想要的内容。</p><pre><code>$ fullname=mylib.1.0.1a.zip  $ filename=$(rev &lt;&lt;&lt; $fullname | cut -d . -f2- | rev)  $ extension=$(rev &lt;&lt;&lt; $fullname | cut -d . -f1 | rev)  $ echo $filename, $extension  mylib.1.0.1a, zip  </code></pre><h2 id="使用参数扩展">使用参数扩展</h2><p>其实不借助复杂的正则表达式，甚至不调用basename, dirname, cut, sed命令，shell脚本一样可以做到所有的操作。看下面的实现：</p><pre><code>$ fullfile=/the/path/mylib.1.0.1a.zip  $ fullname=&quot;$&#123;fullfile##*/&#125;&quot;  $ dir=&quot;$&#123;fullfile%/*&#125;&quot;  $ extension=&quot;$&#123;fullname##*.&#125;&quot;  $ filename=&quot;$&#123;fullname%.*&#125;&quot;  $ echo $dir , $fullname , $filename , $extension  /the/path , mylib.1.0.1a.zip , mylib.1.0.1a , zip  </code></pre><p>真是不能再简洁了，大括号之内变量名配合几个神奇的字符，就是Shell的参数扩展([Parameter<br>Extension](<a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-">https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-</a><br>Expansion.html))功能。</p><ul><li><code>$&#123;fullfile##*/&#125;</code>：从前面开始删除fullfile中最大匹配(longest matching pattern) <code>*/</code> 的字符串</li><li><code>$&#123;fullfile%/*&#125;</code>：从后面开始删除fullfile中最小匹配(shortest matching pattern) <code>/*</code> 的字符串</li><li><code>$&#123;fullname##*.&#125;</code>：从前面开始删除fullname中最大匹配(longest matching pattern) <code>*.</code> 的字符串</li><li><code>$&#123;fullname%.*&#125;</code>：从后面开始删除fullname中最小匹配(shortest matching pattern) <code>.*</code> 的字符串</li></ul><p>参数扩展有多种形式，在shell编程中可以用作参数的拼接，字符串的替换，参数列表截取，变量初值等操作，这里不再详述，请参考后面的功能列表和[官方文档](<a href="https://www.gnu.org/software/bash/manual/html_node/Shell-">https://www.gnu.org/software/bash/manual/html_node/Shell-</a><br>Parameter-Expansion.html)</p><h2 id="参数扩展功能列表">参数扩展功能列表</h2><table><thead><tr><th>参数形式</th><th>扩展后</th></tr></thead><tbody><tr><td>x{y,z}</td><td>xy xz</td></tr><tr><td>${x}{y, z}</td><td>${x}y ${x}z</td></tr><tr><td>${x}{y, $z}</td><td>${x}y ${x}${z}</td></tr><tr><td>${param#pattern}</td><td>从param前面删除pattern的最小匹配</td></tr><tr><td>${param##pattern}</td><td>从param前面删除pattern的最大匹配</td></tr><tr><td>${param%pattern}</td><td>从param后面删除pattern的最小匹配</td></tr><tr><td>${param%%pattern}</td><td>从param后面删除pattern的最大匹配</td></tr><tr><td>${param/pattern/string}</td><td>从param中用string替换pattern的第一次匹配，string可为空</td></tr><tr><td>${param//pattern/string}</td><td>从param中用string替换pattern的所有匹配，string可为空</td></tr><tr><td>${param:3:2}</td><td>截取$param中索引3开始的2个字符</td></tr><tr><td>${param:3}</td><td>截取$param中索引3至末尾的字符</td></tr><tr><td>${@:3:2}</td><td>截取参数列表$@中第3个开始的2个参数</td></tr><tr><td>${param:-word}</td><td>若$param为空或未设置，则参数式返回word，$param不变</td></tr><tr><td>${param:+word}</td><td>若$param为非空，则参数式返回word，$param不变</td></tr><tr><td>${param:=word}</td><td>若$param为空或为设置，则参数式返回word，同时$param设置为word</td></tr><tr><td>${param:?message}</td><td>若$param为空或为设置，则输出错误信息message，若包含空白符，则需引号</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Shell </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Shell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数据结构之栈Stack和队列Queue</title>
+      <link href="/2023/03/29/%E6%95%B0%E6%8D%AE0%20(1)/"/>
+      <url>/2023/03/29/%E6%95%B0%E6%8D%AE0%20(1)/</url>
+      
+        <content type="html"><![CDATA[<p>栈（Stack）和队列（Queue），了解栈和队列的基础知识，学习它们的基础应用。</p><span id="more"></span><h1>栈Stack</h1><p>栈Stack是一种线性结构，是线性表的一种具体形式。栈这种后进先出（Last In First Out，LIFO）的应用非常广泛，例如网页的前进后退功能，编辑器的后一步前一步功能，方法调用时的函数栈等等。</p><p>栈Stack的特性：</p><ul><li>栈的元素必须“后进先出”</li><li>栈的操作只能于线性表表尾进行</li><li>栈的表尾被称为栈顶（Top），栈的表头被称为栈底（bottom）</li></ul><p>栈Stack的操作：</p><ul><li>插入操作（Push），进栈</li><li>删除操作（Pop），出栈</li></ul><p><img src="/gallery/data-structure-stack.png" alt="Stack Pop And Push"></p><h2 id="栈的顺序存储结构">栈的顺序存储结构</h2><p>应用顺序存储结构的栈，元素必须从开始表尾进行操作，从而节省下元素前移补充位置的操作，而不像链式结构可以从表头操作。当栈初始化时，不含有任何数据的栈被称为空栈，此时栈顶就是栈底。</p><h2 id="栈的链式存储结构">栈的链式存储结构</h2><p><strong>栈一般使用顺序存储结构</strong>实现。使用链式存储结构时，栈底为链表头部，栈顶为链表尾部。</p><h2 id="使用栈来进行进制转换">使用栈来进行进制转换</h2><p>例子，使用顺序存储结构的栈计算把<code>8</code>位数的二进制数转换成十进制数。</p><figure class="highlight js"><figcaption><span>Javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stack = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]; <span class="comment">// 11001001 (2)</span></span><br><span class="line"><span class="comment">// 1*2^0 + 0*2^1 + 0*2^2 + 1*2^3 + 0*2^4 + 0*2^5 + 1*2^6 + 1*2^7</span></span><br><span class="line"><span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> power = <span class="number">0</span>; <span class="comment">// start with power of 0 in first digit</span></span><br><span class="line"><span class="keyword">while</span> (stack.<span class="property">length</span>) &#123;</span><br><span class="line">  result += stack.<span class="title function_">pop</span>() * <span class="title class_">Math</span>.<span class="title function_">pow</span>(<span class="number">2</span>, power++);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// result = 201 (10)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Faster way in JavaScript</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;11001001&#x27;</span>, <span class="number">2</span>).<span class="title function_">toString</span>(<span class="number">10</span>);</span><br></pre></td></tr></table></figure><p>例子，使用顺序存储结构的栈计算把<code>8</code>位数的二进制数转换成八进制数。</p><figure class="highlight js"><figcaption><span>Javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stack = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]; <span class="comment">// 11001001 (2)</span></span><br><span class="line"><span class="comment">// 001=&gt;1, 001=&gt;1, 11=&gt;3, final 311 (8)</span></span><br><span class="line"><span class="keyword">let</span> temp = [];</span><br><span class="line"><span class="keyword">while</span> (stack.<span class="property">length</span>) &#123;</span><br><span class="line">  <span class="comment">// 3-digit pair</span></span><br><span class="line">  <span class="keyword">let</span> d0 = stack.<span class="title function_">pop</span>() | <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> d1 = (stack.<span class="title function_">pop</span>() | <span class="number">0</span>) * <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">let</span> d2 = (stack.<span class="title function_">pop</span>() | <span class="number">0</span>) * <span class="number">4</span>;</span><br><span class="line">  <span class="keyword">let</span> D = d0 + d1 + d2;</span><br><span class="line">  temp.<span class="title function_">push</span>(D);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = temp.<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>); <span class="comment">// result = 311 (8)</span></span><br><span class="line">temp = <span class="built_in">parseInt</span>(result, <span class="number">8</span>); <span class="comment">// 201 (10)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Faster way in JavaScript</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;11001001&#x27;</span>, <span class="number">2</span>).<span class="title function_">toString</span>(<span class="number">8</span>);</span><br></pre></td></tr></table></figure><p>例子，使用顺序存储结构的栈计算把<code>8</code>位数的二进制数转换成十六进制数。</p><figure class="highlight js"><figcaption><span>Javascript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> stack = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>]; <span class="comment">// 11001001 (2)</span></span><br><span class="line"><span class="comment">// 1001=&gt;9, 1100=&gt;C, final C9 (16)</span></span><br><span class="line"><span class="keyword">let</span> letters = [<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>];</span><br><span class="line"><span class="keyword">let</span> temp = [];</span><br><span class="line"><span class="keyword">while</span> (stack.<span class="property">length</span>) &#123;</span><br><span class="line">  <span class="comment">// 4-digit pair</span></span><br><span class="line">  <span class="keyword">let</span> d0 = stack.<span class="title function_">pop</span>() | <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> d1 = (stack.<span class="title function_">pop</span>() | <span class="number">0</span>) * <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">let</span> d2 = (stack.<span class="title function_">pop</span>() | <span class="number">0</span>) * <span class="number">4</span>;</span><br><span class="line">  <span class="keyword">let</span> d3 = (stack.<span class="title function_">pop</span>() | <span class="number">0</span>) * <span class="number">8</span>;</span><br><span class="line">  <span class="keyword">let</span> D = d0 + d1 + d2 + d3;</span><br><span class="line">  temp.<span class="title function_">push</span>(D &gt; <span class="number">9</span> ? letters[D % <span class="number">10</span>] : D);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = temp.<span class="title function_">reverse</span>().<span class="title function_">join</span>(<span class="string">&#x27;&#x27;</span>); <span class="comment">// result = C9 (16)</span></span><br><span class="line">temp = <span class="built_in">parseInt</span>(result, <span class="number">16</span>); <span class="comment">// 201 (10)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Faster way in JavaScript</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">&#x27;11001001&#x27;</span>, <span class="number">2</span>).<span class="title function_">toString</span>(<span class="number">16</span>);</span><br></pre></td></tr></table></figure><h2 id="使用栈来计算普通数学表达式">使用栈来计算普通数学表达式</h2><p>计算<code>1 + (2 - 3 * 4.5) / 6</code>;</p><p>第一步，转换中缀表达式到后缀表达式（逆波兰表达式）。</p><figure class="highlight js"><figcaption><span>JavaScript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Expected Result: 1 2 3 4.5 * - 6 / +</span></span><br><span class="line"><span class="keyword">let</span> input = <span class="string">&#x27;1 + (2 - 3 * 4.5) / 6&#x27;</span>;</span><br><span class="line">input = input.<span class="title function_">replace</span>(<span class="regexp">/\s/g</span>, <span class="string">&#x27;&#x27;</span>); <span class="comment">// 1+(2-3*4.5)/6</span></span><br><span class="line"><span class="keyword">let</span> numbers = input.<span class="title function_">split</span>(<span class="regexp">/[\+\-\*\/\(\)]+/</span>);</span><br><span class="line"><span class="comment">// [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4.5&quot;, &quot;6&quot;]</span></span><br><span class="line">numbers.<span class="title function_">forEach</span>(<span class="function">(<span class="params">num, i</span>) =&gt;</span> &#123;</span><br><span class="line">  input = input.<span class="title function_">replace</span>(num, i); <span class="comment">// 0+(1-2*3)/4</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">let</span> result = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> stack = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; input.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> value = input.<span class="title function_">charAt</span>(i);</span><br><span class="line">  <span class="keyword">if</span> (<span class="regexp">/[\+\-\*\/\(\)]/</span>.<span class="title function_">test</span>(value)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (value === <span class="string">&#x27;)&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> symbol = stack.<span class="title function_">pop</span>();</span><br><span class="line">      <span class="keyword">while</span> (symbol !== <span class="string">&#x27;(&#x27;</span>) &#123;</span><br><span class="line">        result += <span class="string">`<span class="subst">$&#123;symbol&#125;</span> `</span>;</span><br><span class="line">        symbol = stack.<span class="title function_">pop</span>();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (stack.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> symbol = stack.<span class="title function_">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (<span class="regexp">/\*\//</span>.<span class="title function_">test</span>(symbol) &amp;&amp; !<span class="regexp">/\*\//</span>.<span class="title function_">test</span>(value)) &#123;</span><br><span class="line">          result += <span class="string">`<span class="subst">$&#123;symbol&#125;</span> `</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          stack.<span class="title function_">push</span>(symbol);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      stack.<span class="title function_">push</span>(value);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    result += <span class="string">`<span class="subst">$&#123;numbers[value]&#125;</span> `</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span> (stack.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">  result += <span class="string">`<span class="subst">$&#123;stack.pop()&#125;</span> `</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// result = &quot;1 2 3 4.5 * - 6 / + &quot;</span></span><br></pre></td></tr></table></figure><p>第二步，计算转换后的逆波兰表达式，最后输出结果。</p><figure class="highlight js"><figcaption><span>JavaScript</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Expected Result: -0.9166666666666667</span></span><br><span class="line"><span class="keyword">let</span> input = <span class="string">&#x27;1 2 3 4.5 * - 6 / + &#x27;</span>;</span><br><span class="line">input = input.<span class="title function_">trim</span>().<span class="title function_">split</span>(<span class="regexp">/\s/</span>);</span><br><span class="line"><span class="comment">// [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4.5&quot;, &quot;*&quot;, &quot;-&quot;, &quot;6&quot;, &quot;/&quot;, &quot;+&quot;]</span></span><br><span class="line"><span class="keyword">let</span> stack = [];</span><br><span class="line"><span class="keyword">let</span> result = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; input.<span class="property">length</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">let</span> value = input[i];</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">isNaN</span>(value)) &#123;</span><br><span class="line">    <span class="keyword">let</span> backNum = stack.<span class="title function_">pop</span>();</span><br><span class="line">    <span class="keyword">let</span> frontNum = stack.<span class="title function_">pop</span>();</span><br><span class="line">    <span class="keyword">let</span> subResult = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (value === <span class="string">&#x27;+&#x27;</span>) &#123;</span><br><span class="line">      subResult = frontNum + backNum;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value === <span class="string">&#x27;-&#x27;</span>) &#123;</span><br><span class="line">      subResult = frontNum - backNum;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value === <span class="string">&#x27;*&#x27;</span>) &#123;</span><br><span class="line">      subResult = frontNum * backNum;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value === <span class="string">&#x27;/&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (backNum === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Divisor cannot be 0&#x27;</span>);</span><br><span class="line">      &#125;</span><br><span class="line">      subResult = frontNum / backNum;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&#x27;Operator must be &quot;+&quot;, &quot;-&quot;, &quot;*&quot; or &quot;/&quot;&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (stack.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">      stack.<span class="title function_">push</span>(subResult);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      result = subResult;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    stack.<span class="title function_">push</span>(<span class="built_in">parseFloat</span>(value));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// result = -0.9166666666666667</span></span><br></pre></td></tr></table></figure><h1>队列Queue</h1><p>队列Queue是一种线性结构，也是线性表的一种具体形式。队列这种先进先出（First In First Out，FIFO）的应用也非常广泛，是只允许在一段进行插入操作，而在另一端进行删除操作的线性表，例如输入缓冲功能，任务顺序加载功能等等。</p><p>队列可以用顺序储存结构实现，但是跟栈相反，<strong>队列一般都用链式储存结构</strong>实现。</p><p>队列Queue的特性：</p><ul><li>队列的元素必须“后进先出”</li><li>队列的操作只能于线性表头尾进行</li></ul><p>队列Queue的操作：</p><ul><li>插入操作（Offer），进队列</li><li>删除操作（Poll），出队列</li></ul><p><img src="/gallery/data-structure-queue.png" alt="Queue Offer And Poll"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Stack </tag>
+            
+            <tag> Queue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++ Function pointers and member function pointers</title>
+      <link href="/2023/03/13/3%20(26)/"/>
+      <url>/2023/03/13/3%20(26)/</url>
+      
+        <content type="html"><![CDATA[<p><em>function</em> is a template. As with other templates we’ve used, we must specify<br>return type and argument types when we create a <em>function</em> type.<br>e.g. function&lt;int(int, int)&gt;</p><span id="more"></span><p>##c++11 functional</p><p>###std::function</p><ul><li><p><strong>C++98 Function pointers and member function pointers</strong></p><ol><li>Exact parameter/return types must be specified.</li><li>Can’t point to nonstatic member functions.</li><li>Can’t point to function objects.</li></ol></li><li><p>__boost::function __</p><ol><li>Using for function, member functions and function objects.</li><li>Useful for callback function.</li></ol></li><li><p><strong>C++11 std::function</strong></p><ol><li>Using for callable entities that can be called like a function.</li></ol><ul><li><em>Functions, function points, function references.</em></li><li><em>Object implicitly convertible to one of those.</em></li><li><em>Function object.</em></li></ul><ol start="2"><li>Useful to be able to refer to any callable entity compatible with a given calling interface.</li></ol></li></ul><p><em>example:</em></p><pre><code>#include &lt;functional&gt;    int add(int i, int j)  &#123;    return i +j;  &#125;    int (*addPoint)(int, int) = add;    auto mod = [](int i, int j) &#123;return i % j;&#125;;    class Div &#123;  public:    int operator () (int i, int j) &#123;      return i / j;    &#125;  &#125;;    class Operation&#123;  public:     int minus(int num1, int num2) &#123; return num1 - num2; &#125;     //int information = 99;  &#125;;  int main() &#123;  std::function&lt;int(int, int)&gt; f1 = add;                          //user-defined function  std::function&lt;int(int, int)&gt; f2 = addPoint;                     //function pointer    std::function&lt;int(int, int)&gt; f3 = Div();                         //user-defined class object with overloadding the fuction-call operator.  std::function&lt;int(int, int)&gt; f4 = std::minus&lt;int&gt;();             //library function object    std::function&lt;int(int, int)&gt; f5 = [](int i, int j)&#123;return i*j;&#125;; //unamed lambda  std::function&lt;int(int, int)&gt; f6 = mod;                           //named lambda object    Operation operation;  std::function&lt;int(int, int)&gt; f7 = std::bind(&amp;Operation::minus,                                              operation,                                              std::placeholders::_1,                                              std::placeholders::_2);//a call of std::bind  std::function&lt;int(Operation&amp;, int, int)&gt; f8 =  &amp;Operation::minus;  //member function  std::function&lt;int(Operation*, int, int)&gt; f9 =  &amp;Operation::minus;  //member function  &#125;  std::cerr&lt;&lt;f1(4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f2(4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f3(4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f4(4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f5(4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f6(4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f7(4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f8(operation,4,2)&lt;&lt;std::endl;  std::cerr&lt;&lt;f9(&amp;operation,4,2)&lt;&lt;std::endl;  </code></pre><p>std::bad_function_call is the type of the exception thrown by<br>std::function::operator() if the function wrapper has no target.</p><p><em>example:</em></p><pre><code>std::function&lt;int()&gt; f = nullptr;  try &#123;      f();  &#125; catch(const std::bad_function_call&amp; e) &#123;      std::cout &lt;&lt; e.what() &lt;&lt; '\n';  &#125;  </code></pre><p><em>Reference:</em><br><a href="http://en.cppreference.com/w/cpp/utility/functional/function">std::functionn</a></p><p>###std::mem_fn</p><p>To use <em>function</em> , we must supply the call signature of the member we want to<br>call. We can, instead, let the compiler deduce the member’s type<br>by using another library facility, <em>mem_fn</em> , whick like <em>function</em> , is<br>defined in the <em>functional header</em>.Like <em>function</em> , <em>mem_fn</em> generates a<br>callable<br>object from a pointer to member. Unlike <em>function</em> , <em>mem_fn</em> will deduce the<br>type of callable from the type of the pointer to member.</p><ul><li><p><strong>C++98 std::mem_fun/mem_fun_ref</strong></p><ol><li>Only can deal with member functions with one or no argument.</li><li>You should pick between both depending on which you want to deal with pointer or reference for class object.</li><li>Do not support smart pointer.</li></ol></li><li><p>__boost::mem_fn __<br><em>boost::mem_fn</em> is ageneralization of the <em>std::mem_fun/mem_fun_ref</em>. It<br>support member function pointers with more than one argument, and support<br>smart poiter.</p></li><li><p>__C++11 std::mem_fn __<br>Similar with <em>boost::mem_fn</em>. The name is quite confusing!(mem_fun Vs mem_fn)</p><p>struct Foo {<br>void displayGreeting() {<br>std::cout &lt;&lt; “Hello, world.\n”;<br>}<br>void displayNumber(int i) {<br>std::cout &lt;&lt; &quot;number: &quot; &lt;&lt; i &lt;&lt; ‘\n’;<br>}</p><pre><code>int dataValue() &#123;    return data;  &#125;    int data;  </code></pre><p>};<br>int main {<br>Foo foo;<br>foo.data = 100;</p><p>// member function without parameter<br>auto f1 = std::mem_fn(&amp;Foo::displayGreeting);<br>f1(foo);</p><p>// member function with parameter<br>auto f2 = std::mem_fn(&amp;Foo::displayNumber);<br>f2(foo, 55);</p><p>// member varibale<br>auto data = std::mem_fn(&amp;Foo::data);<br>std::cout &lt;&lt; &quot;data: &quot; &lt;&lt; data(foo) &lt;&lt; ‘\n’;</p><p>// member function that return int<br>auto f3 = std::mem_fn(&amp;Foo::dataValue);<br>auto f4 = std::mem_fn&lt;int()&gt;(&amp;Foo::dataValue);</p><p>std::cout &lt;&lt; &quot;data: &quot; &lt;&lt; f3(foo) &lt;&lt; ‘\n’;<br>std::cout &lt;&lt; &quot;data: &quot; &lt;&lt; f4(foo) &lt;&lt; ‘\n’;<br>}</p></li></ul><p><em>Reference:</em><br><a href="http://en.cppreference.com/w/cpp/utility/functional/mem_fn">std::mem_fn</a></p><p>###std::bind</p><p>The bind can be thought of as a general-purpose function adaptor. It takes a<br>callable object and generates a new callable that “adapts” the<br>parameter list of the original object. The general form of a call to bind is:<br>auto <em>newCallable</em> = bind( <em>Callable</em> , <em>arg_list</em> );</p><ul><li><p><strong>C++98 std::bind1st/std::bind2nd</strong><br>bind1st(op, value) <em>op(value, param)</em> and bind2nd(op, value) <em>op(param,<br>value)</em>. <em>op</em> is a binary functor, and <em>bind1st/bind2nd</em> actually make the<br>binary functor to unary functor. <em>bind1st</em> bind the fist parameter and<br><em>bind2nd</em> bind the sencond one. Not flexible!</p><ol><li>Bind only first or second arguments.</li><li>Bind only one argument at a time.</li><li>Can’t bind functions with reference parameters.</li><li>Require adaptable function objects. i.e. <em>ptr_fun</em> , <em>mem_fun</em> , and mem_fun_ref_.</li></ol></li><li><p><strong>boost::bind</strong><br><em>boost:::bind</em> is generalization of the c++98 <em>std::bin1st/std::bind2nd</em>. It<br>supports arbitrary function objects, function, function pointer, and<br>member function pointers, and is able to bind any argument to a specific value<br>or route input arguments into arbitrary positions. <em>bind</em> does not place<br>any requirements on the function object; in particular. Mostly it can <a href="http://www.boost.org/doc/libs/1_49_0/boost/bind/placeholders.hpp">bind 9<br>parameters</a>.</p></li><li><p><strong>c++11 std::bind</strong><br>Similar with the <em>boost::bind</em>.</p><ol><li><em>functionObject</em> std::bind(_callableEntity, 1stArgBinding, 2ndArgBinding… nthArgBinding); <a href="http://en.cppreference.com/w/cpp/utility/functional/placeholders">There’s no limit for binding parameters’ number</a>.</li><li>_1 is in namespace std::placeholders.</li></ol></li></ul><p><em>example:</em></p><pre><code>int info(std::string&amp; name, int age, double high, double weight) &#123;    std::cout&lt;&lt;&quot;--------Info-----------&quot;&lt;&lt;std::endl;    std::cout&lt;&lt;&quot;name: &quot;&lt;&lt;name&lt;&lt;std::endl;    std::cout&lt;&lt;&quot;age: &quot;&lt;&lt;age&lt;&lt;std::endl;    std::cout&lt;&lt;&quot;high: &quot;&lt;&lt;high&lt;&lt;std::endl;    std::cout&lt;&lt;&quot;weight: &quot;&lt;&lt;weight&lt;&lt;std::endl;    return age;  &#125;    double high(double high) &#123;    return high;  &#125;    struct Foo &#123;      void displayGreeting() &#123;          std::cout &lt;&lt; &quot;Hello, world.\n&quot;;      &#125;      void displayNumber(int i) &#123;          std::cout &lt;&lt; &quot;number: &quot; &lt;&lt; i &lt;&lt; '\n';      &#125;        int dataValue() &#123;        return data;      &#125;        int data;  &#125;;    int main &#123;    std::string lily = &quot;Lily&quot;;      // like the lily and 160.6 is pass by value    // like std::placeholders::_1 pass by reference    std::bind&lt;int&gt;(info, std::placeholders::_1, 18, std::placeholders::_2, std::placeholders::_2)(lily, 160.6);      auto f1 = std::bind(info, std::placeholders::_1, 18, std::placeholders::_2, std::placeholders::_2);    f1(lily, 160.6);      // nested bind    auto f2 = std::bind(high, std::placeholders::_1)(160.6);    std::bind(info, lily,  std::placeholders::_1, f2, std::placeholders::_2)(18, 160.6);      // nested bind subexpressions share the placeholders    std::bind(info, lily,  std::placeholders::_1, std::placeholders::_2, std::bind(high, std::placeholders::_2))(18, 160.6);      //bind to a member function object    Foo foo;    auto f3 = std::bind(&amp;Foo::displayNumber, foo, std::placeholders::_1);      // bind pointer    Foo* pfoo;    auto f4 = std::bind(&amp;Foo::displayNumber, pfoo, std::placeholders::_1);      // bind smart pointer    std::shared_ptr&lt;Foo&gt; spfoo;    auto f5 = std::bind(&amp;Foo::displayNumber, spfoo, std::placeholders::_1);      // bind uniqu pointer.(std::unique_ptr must be wrapped by std::ref when bound,    //                    because std::unique_ptr isn’t copyable.)    std::unique_ptr&lt;Foo&gt; upfoo;    auto f6 = std::bind(&amp;Foo::displayNumber, std::ref(upfoo), std::placeholders::_1);      // bind member varibale    foo.data = 77;    auto f7 = std::bind(&amp;Foo::data, std::placeholders::_1);      f3(100);    f4(100);    f5(100);    f6(100);    std::cout&lt;&lt; f7(foo) &lt;&lt; std::endl;  &#125;  </code></pre><p><em>Reference:</em><br><a href="http://en.cppreference.com/w/cpp/utility/functional/bind">std::bind</a></p><p>###std::ref/cref<br>Function templates ref and cref are helper functions that generate an object<br>of type std::reference_wrapper, using template argument deduction to<br>determine the template argument of the result.</p><p><em>example:</em></p><pre><code>void fun(int&amp; n1, int&amp; n2, const int&amp; n3) &#123;    std::cout&lt;&lt; &quot;In function&quot; &lt;&lt; n1 &lt;&lt; &quot; &quot; &lt;&lt; n2 &lt;&lt; &quot; &quot; &lt;&lt; n3 &lt;&lt;std::endl;    ++n1;    ++n2;  &#125;    int main &#123;  int n1 =1, n2 = 2, n3 =3;  std::function&lt;void()&gt; f1 = std::bind(fun, n1, std::ref(n2), std::cref(n3));    std::cout&lt;&lt;&quot;Before: &quot;&lt;&lt;n1 &lt;&lt;&quot; &quot;&lt;&lt;n2&lt;&lt; &quot; &quot;&lt;&lt; n3 &lt;&lt;std::endl;  f1();  std::cout&lt;&lt;&quot;After: &quot;&lt;&lt;n1 &lt;&lt;&quot; &quot;&lt;&lt;n2&lt;&lt; &quot; &quot;&lt;&lt; n3 &lt;&lt;std::endl;  &#125;  Before: 1 2 3  In function1 2 3  After: 1 3 3  </code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PotPlayer 实时字幕翻译</title>
+      <link href="/2023/02/11/2%20(2)/"/>
+      <url>/2023/02/11/2%20(2)/</url>
+      
+        <content type="html"><![CDATA[<p>PotPlayer 实时字幕翻译默认是不支持百度翻译的，我们可以通过安装插件的方式来解决</p><span id="more"></span><h3 id="开通百度翻译的开发者">开通百度翻译的开发者</h3><p>免费额度分三种（付费方案自行去官方了解）：</p><ul><li>未实名账号只有5万字符/月</li><li>个人实名：100万字符/月</li><li>个人实名+企业认证：200万字符/月</li></ul><p>开通网址：<a href="https://api.fanyi.baidu.com/product/11">https://api.fanyi.baidu.com/product/11</a></p><p>拉到最下面，有个“立即使用”，登录百度账号，填写必要信息，进行应用注册</p><h3 id="获取APP-ID-和密钥">获取APP ID 和密钥</h3><p>进入：<a href="https://fanyi-api.baidu.com/manage/developer">https://fanyi-api.baidu.com/manage/developer</a></p><p>就能看到<code>APP ID</code> 和<code>密钥</code> 了，保存下来放一边待用，或者用的时候再来看。。</p><h3 id="安装百度翻译插件">安装百度翻译插件</h3><p><a href="https://www.aliyundrive.com/s/qeS861TiwZC">下载插件</a></p><p>来源：阿里云盘 | 提取码：3r2v __</p><p><a href="https://www.aliyundrive.com/s/qeS861TiwZC">立即下载</a></p><p>将下载下来的<code>SubtitleTranslate - baidu.as</code> 和<code>SubtitleTranslate - baidu.ico</code> 复制到<br><code>PotPlayer\Extension\Subtitle\Translate</code>目录下 ，这里 <code>PotPlayer</code> 指代<br><code>PotPlayer</code>的安装目录</p><p>然后重启<code>PotPlayer</code>，即可安装成功</p><h3 id="设置百度翻译">设置百度翻译</h3><p>依次打开，进行设置百度翻译</p><p><a href="https://img30.360buyimg.com/myjd/jfs/t1/104283/33/34048/86387/645defccF2e814813/b172a740263b0e71.png"><img src="https://img30.360buyimg.com/myjd/jfs/t1/104283/33/34048/86387/645defccF2e814813/b172a740263b0e71.png" alt=""></a></p><p>填入 <code>APP ID</code> 和<code>密钥</code></p><p><a href="https://img30.360buyimg.com/myjd/jfs/t1/174857/14/32064/68235/645df026F62ff462b/dd43cd65ab9940d4.png"><img src="https://img30.360buyimg.com/myjd/jfs/t1/174857/14/32064/68235/645df026F62ff462b/dd43cd65ab9940d4.png" alt=""></a></p><p>哦对了，翻译引擎那里记得切换到百度翻译！</p><p>确定后即可开始字幕翻译了</p><h3 id="请求速率【进阶可选】">请求速率【进阶可选】</h3><p>一般默认就行，不用改</p><p><code>SubtitleTranslate - baidu.as</code> 修改位置在23行</p><p>免费额度对应的三个单次最长请求量分别为：QPS=1 、QPS=10和QPS=100</p><p>可以在这里查看到：<a href="https://fanyi-api.baidu.com/doc/8">https://fanyi-api.baidu.com/doc/8</a></p><p>大家一般都是个人实名，可以改小一点，这样倍速看翻译也能跟得上</p><p>若翻译提示：error:54003，那就是超频率被拒绝了，要调大一点</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Watchtower使用方法</title>
+      <link href="/2023/02/10/2%20(1)/"/>
+      <url>/2023/02/10/2%20(1)/</url>
+      
+        <content type="html"><![CDATA[<p>Watchtower 是一个流行的 Docker 容器自动更新工具，它可以帮助您自动监测并更新正在运行的容器</p><span id="more"></span><h3 id="前言">前言</h3><p>Watchtower 的工作原理是周期性地检查 Docker 主机上正在运行的容器，并与 Docker Hub<br>或私有镜像仓库进行比较，以检测镜像的更新。一旦发现镜像有新版本可用，Watchtower 将自动停止旧容器，拉取新镜像，并启动新的容器</p><p>项目地址：<a href="https://github.com/containrrr/watchtower">https://github.com/containrrr/watchtower</a></p><p>官方文档：<a href="https://containrrr.dev/watchtower/">https://containrrr.dev/watchtower/</a></p><h3 id="安装和使用">安装和使用</h3><h4 id="当没有指定参数时，watchtower-将监视所有正在运行的容器">当没有指定参数时，watchtower 将监视所有正在运行的容器</h4><p>Watchtower 本身被打包为一个 Docker 容器，默认支持架构：linux/386、linux/amd64、linux/arm/v6 和<br>linux/arm64</p><pre><code>* docker run -d --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower</code></pre><p>该命令的含义如下：</p><ul><li><code>-d</code> 参数表示将容器以后台（detached）模式运行，即在后台运行而不阻塞终端。</li><li><code>--name watchtower</code> 指定容器的名称为 “watchtower”。</li><li><code>-v /var/run/docker.sock:/var/run/docker.sock</code> 将宿主机上的 <code>/var/run/docker.sock</code> 文件映射到容器中的同一位置。这样做是为了使容器能够与 Docker 守护进程进行通信，从而获取容器和镜像的信息。</li><li><code>containrrr/watchtower</code> 是要使用的 Watchtower 镜像的名称。</li></ul><p>默认情况下，watchtower 将监视在它指向的 Docker 守护进程中运行的所有容器</p><h4 id="指定监视容器">指定监视容器</h4><p>但是，您可以通过在启动 watchtower 时将容器名称指定为参数来限制 watchtower 监视正在运行的容器。比如：</p><pre><code>* docker run -d \* --name watchtower \* -v /var/run/docker.sock:/var/run/docker.sock \* containrrr/watchtower \* nginx redis</code></pre><p>将只监视名为“nginx”和“redis”的容器的更新——所有其他正在运行的容器都将被忽略</p><h4 id="手动运行">手动运行</h4><p>如果您不希望 watchtower 作为守护进程运行，您可以传递标志<code>--run-once</code>并在执行后删除 watchtower 容器，即运行一次：</p><pre><code>* docker run --rm \* -v /var/run/docker.sock:/var/run/docker.sock \* containrrr/watchtower \* --run-once \* nginx redis</code></pre><p>使用此模式将启用调试输出，显示所有执行的操作，因为该模式适用于交互式用户</p><h4 id="清理旧的镜像">清理旧的镜像</h4><p>默认旧的镜像会保留，TAG将会标注成 none，如果不想手动清理，可以按如下方式自动清理旧镜像</p><p>参数上，可以用<code>--cleanup</code> 或者简写<code>-c</code></p><p>也可用环境变量：<code>WATCHTOWER_CLEANUP</code> ，就是容器创建时 -e 指定或者在 Dockerfile 中使用 <code>ENV</code> 指令设置的</p><h4 id="删除附加的卷">删除附加的卷</h4><p>参数：--remove-volumes</p><p>环境变量：WATCHTOWER_REMOVE_VOLUMES</p><p>指定此标志后，watchtower 将在使用新映像重新启动之前从容器中删除所有附加的卷。使用此选项可在更新容器时强制填充新卷</p><p>附加卷是将容器内的路径与主机上的路径进行关联的机制。通过挂载卷，可以实现容器内的数据持久化或与主机之间的数据共享。当容器更新时，有时可能需要删除旧的附加卷，并在使用新镜像重新启动容器时重新创建这些卷</p><p>使用此选项，请 <strong>务必</strong> 确认是否需要保留原来的挂载数据！</p><p>其他还有很多的用法，请自行查找官方文档</p><h3 id="其他">其他</h3><p>第一次运行，要等24h后才会执行更新，此时可以在原先基础上选择用手动执行，这会触发强制更新，但并不会影响原先的更新计划</p><p>默认更新计划是每5分钟执行一次</p><p><code>--interval</code>：指定 Watchtower 运行的间隔时间，默认为 300 秒（5 分钟）。也可以通过 <code>-e WATCHTOWER_POLL_INTERVAL=&lt;seconds&gt;</code> 来设置自定义的间隔时间</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Watchtower </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Watchtower </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用cloudflare的workers加速GitHub</title>
+      <link href="/2023/01/16/2%20(10)/"/>
+      <url>/2023/01/16/2%20(10)/</url>
+      
+        <content type="html"><![CDATA[<p>依靠cloudflare的workers加速GitHub项目</p><span id="more"></span><p>搭建起来很快，所以可以做到免费，个人使用完全没问题,避免有时候在国内拉取项目或者下载没速度或速度很慢的情况</p><p>首先在cloudflare新建一个workers，随便取个名字，然后复制粘贴下面的代码</p><pre><code>'use strict'/** * static files (404.html, sw.js, conf.js)*/const ASSET_URL = 'https://hunshcn.github.io/gh-proxy/'// 前缀，如果自定义路由为example.com/gh/*，将PREFIX改为 '/gh/'，注意，少一个杠都会错！const PREFIX = '/'// 分支文件使用jsDelivr镜像的开关，0为关闭，默认关闭const Config = &#123;  jsdelivr: 0&#125;const whiteList = [] // 白名单，路径里面有包含字符的才会通过，e.g. ['/username/']/** @type &#123;RequestInit&#125; */const PREFLIGHT_INIT = &#123;  status: 204,  headers: new Headers(&#123;    'access-control-allow-origin': '*',    'access-control-allow-methods': 'GET,POST,PUT,PATCH,TRACE,DELETE,HEAD,OPTIONS',     'access-control-max-age': '1728000',   &#125;),&#125;const exp1 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:releases|archive)\/.*$/iconst exp2 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:blob|raw)\/.*$/iconst exp3 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/(?:info|git-).*$/iconst exp4 = /^(?:https?:\/\/)?raw\.(?:githubusercontent|github)\.com\/.+?\/.+?\/.+?\/.+$/iconst exp5 = /^(?:https?:\/\/)?gist\.(?:githubusercontent|github)\.com\/.+?\/.+?\/.+$/iconst exp6 = /^(?:https?:\/\/)?github\.com\/.+?\/.+?\/tags.*$/i    /**  * @param &#123;any&#125; body  * @param &#123;number&#125; status  * @param &#123;Object&lt;string, string&gt;&#125; headers */function makeRes(body, status = 200, headers = &#123;&#125;) &#123;   headers['access-control-allow-origin'] = '*'   return new Response(body, &#123;status, headers&#125;)&#125;/**  * @param &#123;string&#125; urlStr*/    function newUrl(urlStr) &#123;        try &#123;            return new URL(urlStr)        &#125; catch (err) &#123;            return null        &#125;    &#125;    addEventListener('fetch', e =&gt; &#123;        const ret = fetchHandler(e)            .catch(err =&gt; makeRes('cfworker error:\n' + err.stack, 502))        e.respondWith(ret)    &#125;)     function checkUrl(u) &#123;        for (let i of [exp1, exp2, exp3, exp4, exp5, exp6]) &#123;            if (u.search(i) === 0) &#123;                return true            &#125;        &#125;        return false    &#125;        /**     * @param &#123;FetchEvent&#125; e     */    async function fetchHandler(e) &#123;        const req = e.request        const urlStr = req.url        const urlObj = new URL(urlStr)        let path = urlObj.searchParams.get('q')        if (path) &#123;            return Response.redirect('https://' + urlObj.host + PREFIX + path, 301)        &#125;        // cfworker 会把路径中的 `//` 合并成 `/`        path = urlObj.href.substr(urlObj.origin.length + PREFIX.length).replace(/^https?:\/+/, 'https://')        if (path.search(exp1) === 0 || path.search(exp5) === 0 || path.search(exp6) === 0 || path.search(exp3) === 0 || path.search(exp4) === 0) &#123;            return httpHandler(req, path)        &#125; else if (path.search(exp2) === 0) &#123;            if (Config.jsdelivr) &#123;                const newUrl = path.replace('/blob/', '@').replace(/^(?:https?:\/\/)?github\.com/, 'https://cdn.jsdelivr.net/gh')                return Response.redirect(newUrl, 302)            &#125; else &#123;                path = path.replace('/blob/', '/raw/')                return httpHandler(req, path)            &#125;        &#125; else if (path.search(exp4) === 0) &#123;            const newUrl = path.replace(/(?&lt;=com\/.+?\/.+?)\/(.+?\/)/, '@$1').replace(/^(?:https?:\/\/)?raw\.(?:githubusercontent|github)\.com/, 'https://cdn.jsdelivr.net/gh')            return Response.redirect(newUrl, 302)        &#125; else &#123;            return fetch(ASSET_URL + path)        &#125;    &#125;  /**     * @param &#123;Request&#125; req     * @param &#123;string&#125; pathname   */    function httpHandler(req, pathname) &#123;        const reqHdrRaw = req.headers            // preflight        if (req.method === 'OPTIONS' &amp;&amp;            reqHdrRaw.has('access-control-request-headers')        ) &#123;            return new Response(null, PREFLIGHT_INIT)        &#125;            const reqHdrNew = new Headers(reqHdrRaw)            let urlStr = pathname        let flag = !Boolean(whiteList.length)        for (let i of whiteList) &#123;            if (urlStr.includes(i)) &#123;                flag = true                break            &#125;        &#125;        if (!flag) &#123;            return new Response(&quot;blocked&quot;, &#123;status: 403&#125;)        &#125;        if (urlStr.startsWith('github')) &#123;            urlStr = 'https://' + urlStr        &#125;        const urlObj = newUrl(urlStr)            /** @type &#123;RequestInit&#125; */        const reqInit = &#123;            method: req.method,            headers: reqHdrNew,            redirect: 'manual',            body: req.body        &#125;        return proxy(urlObj, reqInit)    &#125;        /**     *     * @param &#123;URL&#125; urlObj     * @param &#123;RequestInit&#125; reqInit     */    async function proxy(urlObj, reqInit) &#123;        const res = await fetch(urlObj.href, reqInit)        const resHdrOld = res.headers        const resHdrNew = new Headers(resHdrOld)            const status = res.status            if (resHdrNew.has('location')) &#123;            let _location = resHdrNew.get('location')            if (checkUrl(_location))                resHdrNew.set('location', PREFIX + _location)            else &#123;                reqInit.redirect = 'follow'                return proxy(newUrl(_location), reqInit)            &#125;        &#125;        resHdrNew.set('access-control-expose-headers', '*')        resHdrNew.set('access-control-allow-origin', '*')            resHdrNew.delete('content-security-policy')        resHdrNew.delete('content-security-policy-report-only')        resHdrNew.delete('clear-site-data')            return new Response(res.body, &#123;            status,            headers: resHdrNew,        &#125;)&#125;   </code></pre><p>然后保存，返回打开域名网页应该是一个加速网页了，推荐还是添加一个自定义域名，方便记忆，还有是因为workers的自带域名已经会被GFW防火墙拦截了</p><p>下面是原作者GitHub：<a href="https://github.com/hunshcn/gh-proxy">https://github.com/hunshcn/gh-proxy</a></p><p>上面的代码GitHub页面：<a href="https://github.com/hunshcn/gh-proxy/blob/master/index.js">https://github.com/hunshcn/gh-proxy/blob/master/index.js</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> GitHub </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GitHub </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cloudflare用worker搭建节点</title>
+      <link href="/2023/01/15/2%20(9)/"/>
+      <url>/2023/01/15/2%20(9)/</url>
+      
+        <content type="html"><![CDATA[<p>众所周知，cloudflare可以白嫖的东西很多，但实在没想到可以这么多</p><span id="more"></span><p>之前WARP免费用，现在又有大佬搞出来用worker搭建节点，实在是离谱，先声明:用worker搭建的vless节点毕竟是在CDN上，所以会跳IP，对于有账号操作要求的小伙伴不太适合，经常跳IP可能有封号的风险，所以这种方法搭建的节点只适合于应急或者不登陆账号看视频用。还有就是目前代码搭建的是vless节点，需要支持对应协议的客户端才能使用。</p><p>下面开始教程，因为基于worker，国内对于worker的域名有屏蔽，建议有一个自己的域名并托管到cloudflare，网上有太多教程，这里就不多说了，不需要VPS，那么首先登陆cloudflare(没有的小伙伴自行注册)，从首页左边侧边栏找到worker，点击进入，创建worker。</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/07/Untitled-1024x465.png" alt=""></p><p>然后随便起个名字，保存部署。</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/07/Untitled-1-1024x472.png" alt=""></p><p>部署完成跳转界面后点击编辑代码</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/07/Untitled-2-1024x475.png" alt=""></p><p>然后到这个GitHub复制所需代码：&lt;<a href="https://github.com/zizifn/edgetunnel/blob/main/src/worker-">https://github.com/zizifn/edgetunnel/blob/main/src/worker-</a><br>vless.js&gt;，然后把原本worker里的代码删了，把复制的代码粘贴进去，到<a href="https://1024tools.com/uuid">uuid生成网站</a>生成一个uuid，把uuid保存下来记住，替换代码中userID中的uuid，<a href="http://xn--proxyIPcdn-1t2p622agqg2mc50t75etm8azo1a8fcut3k.chigua.xn--tkcdn-ym6jl44o.anycast.eu.org">在proxyIP的单引号中暂时填入cdn.chigua.tk或者cdn.anycast.eu.org</a>，然后右上角保存并部署。</p><p>如果想要更换节点端口，更换地方在worker代码的103行处，代码默认是443，可根据自己爱好修改，但是如果更换的端口不在cloudflare的cdn端口范围内就无法使用后续的优选IP了，这个要注意。</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/07/Untitled-3-1024x472.png" alt=""></p><p>然后返回上一页，准备替换worker域名为自己的域名，点击触发器，添加自定义域(前提是有自己的域名并托管在cloudflare上)，等待自己的域名生效，一般只要几分钟。</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/07/Untitled-4-1024x469.png" alt=""></p><p>等自定义域生效后，用你的域名加上刚刚保存的uuid打开网页就能获得vless节点连接，复制到支持vless协议的客户端使用，注意：打开网页连接格式为，你的域名/uuid，比如<a href="https://abcd.com/uuid%EF%BC%8C%E6%88%90%E5%8A%9F%E6%89%93%E5%BC%80%E5%90%8E%E5%A6%82%E4%B8%8B%E3%80%82">https://abcd.com/uuid，成功打开后如下。</a></p><p><img src="https://baishikexue.com/wp-content/uploads/2023/07/Untitled-5-1024x465.png" alt=""></p><p>因为部署在worker里，所以每天只有十万次请求，到达上限后等第二天才能继续使用。</p><p>此节点也能优选IP，打开<a href="https://zip.baipiao.eu.org">每日优选IP网站</a>，打开会自动下载一个压缩包里面含有各种IP，根据自己的需求可以选择对应地区的IP来优选并替换节点IP，如何优选IP网上有太多教程，这里也不多说了，祝大家用的开心。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 插件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Cloudflare </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vps解锁流媒体</title>
+      <link href="/2023/01/14/2%20(8)/"/>
+      <url>/2023/01/14/2%20(8)/</url>
+      
+        <content type="html"><![CDATA[<p>有时候自己的vps并不能完全解锁对应地区的流媒体，但是自己又有观看需求</p><span id="more"></span><p>再去整一个服务器显然不是很划算，于是不知道从什么时候开始就有了dns解锁流媒体这个东西，可以使流媒体的流量分流到能解锁流媒体的服务器上来进行解锁对应流媒体，但是很多小伙伴并不知道具体怎么配置，下面给出参考配置。</p><p>首先vps上搭建好x-ui，因为这个对新手来说很方面，有界面一目了然能看到，然后到x-ui的面板设置，找到xray相关设置，开始修改配置文件。</p><pre><code>&#123;      &quot;api&quot;: &#123;        &quot;services&quot;: [          &quot;HandlerService&quot;,          &quot;LoggerService&quot;,          &quot;StatsService&quot;        ],        &quot;tag&quot;: &quot;api&quot;      &#125;,      &quot;inbounds&quot;: [        &#123;          &quot;listen&quot;: &quot;127.0.0.1&quot;,          &quot;port&quot;: 62789,          &quot;protocol&quot;: &quot;dokodemo-door&quot;,          &quot;settings&quot;: &#123;            &quot;address&quot;: &quot;127.0.0.1&quot;          &#125;,          &quot;tag&quot;: &quot;api&quot;        &#125;      ],      &quot;outbounds&quot;: [        &#123;          &quot;protocol&quot;: &quot;freedom&quot;,          &quot;settings&quot;: &#123;&quot;domainStrategy&quot;: &quot;UseIP&quot;&#125;        &#125;,        &#123;          &quot;protocol&quot;: &quot;blackhole&quot;,          &quot;settings&quot;: &#123;&#125;,          &quot;tag&quot;: &quot;blocked&quot;        &#125;      ],      &quot;policy&quot;: &#123;        &quot;system&quot;: &#123;          &quot;statsInboundDownlink&quot;: true,          &quot;statsInboundUplink&quot;: true        &#125;      &#125;,      &quot;routing&quot;: &#123;        &quot;rules&quot;: [          &#123;            &quot;inboundTag&quot;: [              &quot;api&quot;            ],            &quot;outboundTag&quot;: &quot;api&quot;,            &quot;type&quot;: &quot;field&quot;          &#125;,          &#123;            &quot;ip&quot;: [              &quot;geoip:private&quot;            ],            &quot;outboundTag&quot;: &quot;blocked&quot;,            &quot;type&quot;: &quot;field&quot;          &#125;,          &#123;            &quot;outboundTag&quot;: &quot;blocked&quot;,            &quot;protocol&quot;: [              &quot;bittorrent&quot;            ],            &quot;type&quot;: &quot;field&quot;          &#125;        ]      &#125;,    &quot;dns&quot;: &#123;        &quot;servers&quot;: [          &quot;1.1.1.1&quot;,&quot;8.8.8.8&quot;,           &#123;            &quot;address&quot;: &quot;4.4.4.4（以实际提供商给出的为准）&quot;,             &quot;port&quot;: 53,            &quot;domains&quot;: [               &quot;geosite:netflix&quot;            ]          &#125;        ]      &#125;,      &quot;stats&quot;: &#123;&#125;    &#125;</code></pre><p>可以复制上面的配置到x-<br>ui配置中，然后复制DNS解锁商家给出的ip地址，粘贴到配置文件中的相应位置，在domains里可以添加解锁商可以解锁的相应流媒体域名，但是要保证添加格式一定要和上面相同，不然保存不了，比如要添加迪士尼解锁</p><pre><code>&quot;domains&quot;: [  &quot;geosite:netflix&quot;,  &quot;geosite:disney&quot;]</code></pre><p>x-ui配置里的geo文件自带有流媒体域名分流，所以要在前面加上geosite：而有些没有自带分流的就需要添加域名，但是要给每条域名前后加上英文双引号（”）号且用英文逗号隔开，下面是已知的geo文件分组域名</p><pre><code>&quot;geosite:netflix&quot;,&quot;geosite:bahamut&quot;,&quot;geosite:hulu&quot;,&quot;geosite:hbo&quot;,&quot;geosite:disney&quot;,&quot;geosite:bbc&quot;,&quot;geosite:4chan&quot;,&quot;geosite:fox&quot;,&quot;geosite:abema&quot;,&quot;geosite:dmm&quot;,&quot;geosite:niconico&quot;,&quot;geosite:pixiv&quot;,&quot;geosite:bilibili&quot;,&quot;geosite:viu&quot;</code></pre><p>修改配置文件完成后记得保存配置然后重启面板，测试节点是否解锁相应流媒体，如果觉得这个方法太麻烦了，推荐用WARP一键解锁，方便快捷，以上方法仅供参考，不确定是否适合每个vps。</p><p>ChatGPT的解锁域名：</p><pre><code>openai.comcdn.auth0.comazureedge.netsentry.ioazurefd.netintercomcdn.comintercom.iogoogle-analytics.comidentrust.comchallenges.cloudflare.comai.com</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> vps </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vps </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>通过代理服务连接WhatsApp</title>
+      <link href="/2023/01/13/2%20(5)/"/>
+      <url>/2023/01/13/2%20(5)/</url>
+      
+        <content type="html"><![CDATA[<p>什么是WhatsApp，WhatsApp全称为WhatsApp Messenger，简称WhatsApp</p><span id="more"></span><p>是Meta公司旗下一款用于智能手机的跨平台加密即时通信应用程序。该软件透过互联网进行语音通话及影像通话，并使用标准移动网络电话号码向其他用户发送短信、文档文件、PDF文件、图片、视频、音乐、联系人信息、用户位置及录音档等，到现在全球已经有几十亿人下载使用。</p><p>但是在某些国家并不能直接访问和使用，需要通过VPN或者其他方式访问和使用，但是WhatsApp官方在2023年1月5号推出了代理服务。</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/04/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2023-04-15-162522-1024x613.png" alt=""></p><p>也就是说WhatsApp可以像telegram一样在软件内添加代理使用，不需要在使用的时候再打开VPN了，但是找了网上好像都没有WhatsApp搭建的教程，只有官方的简单说明和在<a href="https://github.com/WhatsApp/proxy">GitHub</a>上简单的搭建代码。</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/04/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2023-04-15-162348.png" alt=""></p><p>而且不知道设置代理的人也不清楚代理长什么样子，所以就想给需要WhatsApp代理的朋友们搞个教程。</p><p><strong>下面正式开始：</strong></p><p>首先还是最主要的问题，需要一台服务器或者VPS，但是还是要稍微靠谱一点的商家，不然IP都ping不通就算搭建了代理也没用。<br>推荐vps：<a href="https://www.dmit.io/aff.php?aff=6525">DMIT家的服务器</a>，速度还行。</p><p>首先先用ssh工具连接上服务器或VPS，然后</p><pre><code>sudo -i</code></pre><p>切换为root用户，如果已经是root用户的就不用执行这条命令了，然后安装docker，用docker官方给的一键命令安装</p><pre><code>curl -fsSL https://get.docker.com -o get-docker.sh   sudo sh get-docker.sh</code></pre><p>如果docker第一条命令无法使用可能是没有安装curl命令，</p><pre><code>apt install -y curl     #Ubuntu/Debian安装curlyum install -y curl     #centos安装curl</code></pre><p>安装完docker后用</p><pre><code>docker --version</code></pre><p>查看是否安装成功，安装成功后应该会显示Docker version 20.10.21, build baeda1f<br>类似的版本号然后克隆WhatsApp官方的GitHub库到服务器</p><pre><code>git clone https://github.com/WhatsApp/proxy.git</code></pre><p>打开库目录</p><pre><code>cd proxy</code></pre><p>然后构建代理容器</p><pre><code>docker build proxy/ -t whatsapp_proxy:1.0</code></pre><p>命令跑完应该会出现下面的样子</p><p><img src="https://baishikexue.com/wp-content/uploads/2023/04/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE-2023-04-15-202904-1024x440.png" alt=""></p><p>__WhatsApp官方在六月份更行了代码，目前代理可以支持媒体文件了</p><p>然后启动docker容器</p><pre><code>docker run -it -p 80:80 -p 443:443 -p 5222:5222 -p 8080:8080 -p 8443:8443 -p 8222:8222 -p 8199:8199 -p 587:587 -p 7777:7777 whatsapp_proxy:1.0</code></pre><p>如果服务器有防火墙，还要放行相应的端口，80，443，5222，8080，8443，8222，8199，587端口和7777端口为媒体文件端口也要放行，docker容器启动之后会显示</p><p>然后就可以关掉ssh连接工具了，到WhatsApp客户端连接代理了，下面是官方给出的方法</p><p>最重要的来了，在代理地址那里填写的是你的服务器IP地址，下方有两个端口选项，一个是聊天端口，可以填写443或5222，但只有443端口能开启TLS使用，媒体端口可以填587或7777，然后保存并使用，连接成功后会显示，这样就可以不用每次再打开梯子了，当然有域名也可以将IP解析到域名下，然后把代理地址的IP换为域名，但是国内直接访问国外主机连接延迟太高，建议非必要不直接使用代理，还是使用机场节点来的快。</p><p>官方于2023年六月份更新了代码，目前可以支持媒体文件了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker常用的Linux命令安装的代码</title>
+      <link href="/2023/01/12/2%20(4)/"/>
+      <url>/2023/01/12/2%20(4)/</url>
+      
+        <content type="html"><![CDATA[<p>我们购买用来搭建节点的云服务器或者VPS大多数都是Linux系统，常用的一般都是Debian，Ubuntu，CentOS</p><span id="more"></span><p><strong>这三种常用的一般是Debian9，10，11，Ubuntu18，20，22和CentOS7，8。但是不同的服务器商家虽然系统是一样的，但是系统里面预装的软件包和命令也是有区别的，所以有时候自己搭建节点的时候可能会因为没有安装某一项命令而无法执行脚本，所以本文列出了一些常用的Linux命令安装的代码。</strong></p><p>首先是最重要的切换系统为root用户：</p><pre><code>sudo -i</code></pre><p>在 Debian/Ubuntu 系统中一些命令是通用的：</p><pre><code>apt update -y     #更新软件包apt install -y curl socat     #安装curl 和 socatapt-get install wget     #安装wget</code></pre><p>CentOS系统：</p><pre><code>yum update -y     #更新软件包yum install -y curl socat     #安装curl 和 socatyum -y install wget     #安装wget</code></pre><p><strong>服务器或者VPS有时候也会用到docker，所以下面列出docker官方的一键脚本，但是安装docker要保证自己的服务器或者VPS有足够的运行空间和内存，否则可能会安装失败或者安装了无法正常运行。</strong></p><p>使用docker官方的一键命令安装docker，Ubuntu/Debian/centos都能用：</p><pre><code>curl -fsSL https://get.docker.com -o get-docker.shsudo sh get-docker.sh</code></pre><p>如果显示无法安装，可能是系统没有安装curl命令，需要先安装curl命令</p><p>本文命令代码会不定时检查更新。</p><p>__如果遇到bug无法处理请在购买服务器或者VPS的网站后台重置系统！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Ubuntu安装nodejs&amp;npm</title>
+      <link href="/2023/01/11/2%20(3)/"/>
+      <url>/2023/01/11/2%20(3)/</url>
+      
+        <content type="html"><![CDATA[<p>Ubuntu安装nodejs&amp;npm</p><span id="more"></span><h3 id="Node-js-和-npm的关系">Node.js 和 npm的关系</h3><ul><li><p>npm 是<a href="http://nodejs.org/">Node.js</a>的包管理器。<a href="https://github.com/npm/npm">它作为一个开源项目</a>创建于 2009 年，旨在帮助 JavaScript 开发人员轻松共享打包的代码模块。</p></li><li><p>npm Registry 是一个公开的开源代码包集合，用于 Node.js、<a href="http://www.ember-cli.com/">前端 Web 应用程序</a>、<a href="http://cordova.apache.org/">移动应用程序</a>、<a href="https://tessel.io/">机器人</a>、<a href="https://linerate.f5.com/">路由器</a>以及 JavaScript 社区的无数其他需求。</p></li><li><p>npm 是允许开发人员安装和发布这些包的命令行客户端</p></li><li><p>nodejs 软件包同时包含<code>node</code>和<code>npm</code>二进制包</p></li></ul><p>除外，npm 还是世界上最大的软件仓库</p><h3 id="方式一：源安装">方式一：源安装</h3><p>Ubuntu 20.04 软件源中的 Node.js 版本是<code>10.19.0</code>，这个版本是一个长期支持版。直接来看一下命令</p><pre><code>* sudo apt update* sudo apt install nodejs npm</code></pre><p>验证方式：分别执行如下命令，有版本信息返回则成功</p><pre><code>* node -v* npm -v</code></pre><p>但是 Node.js 版本永远是 10.19.0 版本的，对于有些项目来说，可能需要特定版本的，那么这种方法就不能满足需求，往后看</p><h3 id="方式二：NodeSource">方式二：NodeSource</h3><p>NodeSource 是一个 <strong>公司，聚焦于提供企业级的 Node 支持</strong> 。 它维护了一个 APT 软件源，其中包含了很多 Node.js<br>版本。可以指定 Node.js 的版本，安装也十分简单和方便</p><p>以 sudo 用户身份运行下面的命令，下载并执行 NodeSource 安装脚本</p><pre><code>* curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -</code></pre><p>这个脚本将会添加 NodeSource 的签名 key 到你的系统，创建一个 apt 源文件，安装必备的软件包，并且刷新 apt 缓存</p><p>解释一下，<code>setup_16.x</code> 表示你要安装的是 16.x 版本的 Node.js，如果需要其他版本的，把“16”换成其他数字即可，另外，长期维护版都是双数，可以在文末的相关链接里查看，16 是目前最新的LTS，一直会维护到<br>2023-09-11</p><p>然后去安装 Node.js 和 npm</p><pre><code>* sudo apt install nodejs</code></pre><p>另外，如果想要从 npm 编译本地扩展，你需要安装开发工具：</p><pre><code>* sudo apt install build-essential</code></pre><h3 id="方式三：nvm">方式三：nvm</h3><p>nvm全英文也叫<code>Node Version Manager</code><br>，是一个nodejs的版本管理工具。nvm和n都是node.js版本管理工具，为了解决node.js各种版本存在不兼容现象可以通过它可以安装和切换不同版本的node.js</p><p>安装nvm，二选一</p><pre><code>* curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash* # 或者* wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash</code></pre><p>上述脚本会将 nvm<br>存储库克隆到<code>~/.nvm</code>，并尝试将以下代码段中的源代码行添加到正确的配置文件（<code>~/.bash_profile</code>、<code>~/.zshrc</code>、<code>~/.profile</code>或<code>~/.bashrc</code>）</p><pre><code>* export NVM_DIR=&quot;$([ -z &quot;$&#123;XDG_CONFIG_HOME-&#125;&quot; ] &amp;&amp; printf %s &quot;$&#123;HOME&#125;/.nvm&quot; || printf %s &quot;$&#123;XDG_CONFIG_HOME&#125;/nvm&quot;)&quot;* [ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm</code></pre><p>以<code>~/.bashrc</code>  为例，在~/.bashrc的末尾添加上面的命令（<code>vi ~/.bashrc</code> ）</p><p>然后使配置生效</p><pre><code>* source ~/.bashrc</code></pre><p>如果你写到其他的配置文件里，你可以这样做</p><p><em>zsh：</em>  <code>source ~/.zshrc</code></p><p><em>ksh：</em>  <code>. ~/.profile</code></p><p>用法也很简单</p><p>可以使用以下命令列出可用版本<code>ls-remote</code>：</p><pre><code>* nvm ls-remote</code></pre><p>要下载、编译和安装最新版本的 node，请执行以下操作：</p><pre><code>* nvm install node # &quot;node&quot; is an alias for the latest version</code></pre><p>要安装特定版本的节点：</p><pre><code>* nvm install 14.7.0 # or 16.3.0, 12.22.1, etc</code></pre><p>注意：安装的第一个版本成为默认版本</p><p>那么想用其他版本时候怎么办呢？先下载安装好需要的版本，然后切换过去，如：</p><pre><code>* nvm use 16.3.0</code></pre><p>修改默认的版本：</p><pre><code>* nvm alias default 16.3.0</code></pre><p>这些足够基本使用了，详见相关链接，自行参考</p><h3 id="其他">其他</h3><p>什么？你只是单纯地想下载 npm？wo靠，铁子你早说啊，来：</p><pre><code>* curl -qL https://www.npmjs.com/install.sh | sh</code></pre><h3 id="相关链接">相关链接</h3><p>Node.js 官网：<a href="https://nodejs.org/zh-cn/">https://nodejs.org/zh-cn/</a></p><p>Node.js 长期维护版（LTS）：<a href="https://github.com/nodejs/release#release-schedule">https://github.com/nodejs/release#release-schedule</a></p><p>nvm：<a href="https://github.com/nvm-sh/nvm">https://github.com/nvm-sh/nvm</a></p><p>npm：<a href="https://www.npmjs.com">https://www.npmjs.com</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Ubuntu </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Win 11 子系统 Ubuntu 22.04 SSH 登陆</title>
+      <link href="/2023/01/10/i/"/>
+      <url>/2023/01/10/i/</url>
+      
+        <content type="html"><![CDATA[<p>前两天写了Win 11安装Linux 子系统，即：WSL 今天看一下如何 SSH 登陆它</p><span id="more"></span><h3 id="子系统-Ubuntu-上">子系统 Ubuntu 上</h3><p>安装 OpenSSH</p><pre><code> * sudo apt -y install openssh-server</code></pre><p>修改 /etc/ssh/sshd_config，允许root，允许密码，分别执行如下两条命令</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* sudo sed -i <span class="string">&#x27;s/^#\?PermitRootLogin.*/PermitRootLogin yes/g&#x27;</span> /etc/ssh/sshd_config</span><br><span class="line">* sudo sed -i <span class="string">&#x27;s/^#\?PasswordAuthentication.*/PasswordAuthentication yes/g&#x27;</span> /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure><p>设一个root密码，然后启动ssh服务</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* service ssh start</span><br></pre></td></tr></table></figure><p>设置开机自启</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* sudo systemctl enable ssh</span><br></pre></td></tr></table></figure><h3 id="连接-SSH">连接 SSH</h3><p>IP地址可以直接写 <code>localhost</code> 或<code>127.0.0.1</code> ，或者 WSL 内部的IP，然后就能用任意 SSH 登陆方式登陆了…</p><p>想用的时候随时连接，也不用通过 WSL 图标打开，不需要后台挂着，用着十分舒服</p><h3 id="结语">结语</h3><p>完结，撒花！！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Git基本操作指南</title>
+      <link href="/2023/01/10/1/"/>
+      <url>/2023/01/10/1/</url>
+      
+        <content type="html"><![CDATA[<p>关于 Git/Github的知识</p><span id="more"></span><h3 id="在-Git-仓库中切换用户">在 Git 仓库中切换用户</h3><ol><li>查看当前 Git 配置</li></ol><p>在命令行中输入以下命令，查看当前 Git 的全局配置：</p><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br></pre></td></tr></table></figure></code></pre><p>如果输出的用户名或邮箱不是想要使用的账户信息，那么需要更改配置</p><ol start="2"><li>更改 Git 配置</li></ol><p>在命令行中输入以下命令，更改 Git 的全局配置：</p><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;New username&quot;</span><br><span class="line">git config --global user.email &quot;New email address&quot;</span><br></pre></td></tr></table></figure></code></pre><p>将 “New username” 和 “New email address” 替换为想要使用的用户名和邮箱地址（隐私起见：请勿设置个人邮箱）</p><ol start="3"><li>检查更改是否生效</li></ol><p>在命令行中输入以下命令，检查更改是否生效：</p><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br></pre></td></tr></table></figure></code></pre><p>如果输出的用户名和邮箱地址与刚才设置的信息一致，那么更改已经生效</p><p><strong>注意</strong> ：如果您需要在某个特定的 Git 仓库中使用不同的账户信息，可以在该仓库的根目录下新建一个 “.gitconfig”<br>文件，并在其中设置新的用户名和邮箱地址。在该仓库中使用以下命令设置新的用户名和邮箱地址：</p><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config user.name &quot;New username&quot;</span><br><span class="line">git config user.email &quot;New email address&quot;</span><br></pre></td></tr></table></figure></code></pre><p>这样，就可以在特定的 Git 仓库中使用不同的账户信息了</p><h3 id="Git-使用代理">Git 使用代理</h3><ol><li>设置代理</li></ol><p>在命令行中输入以下命令，设置代理：</p><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://proxy.example.com:port</span><br><span class="line">git config --global https.proxy https://proxy.example.com:port</span><br></pre></td></tr></table></figure></code></pre><p>将 “<a href="http://proxy.example.com">http://proxy.example.com</a>:port” 和 “<a href="https://proxy.example.com">https://proxy.example.com</a>:port”<br>替换为要使用的代理服务器地址和端口号</p><ol start="2"><li>取消代理</li></ol><p>如果需要取消代理，可以在命令行中输入以下命令：</p><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure></code></pre><p>这样，就可以在 Git 中使用代理来访问仓库了</p><p>注意：如果使用的是 SOCKS 代理，可以将<code>http.proxy</code> 和<code>https.proxy</code> 改为<code>socks.proxy</code><br>和<code>socks5://proxy.example.com:port</code></p><h3 id="推送仓库">推送仓库</h3><ol><li>确认远程仓库</li></ol><p>在命令行中输入以下命令，确认远程仓库的 URL：</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure><p>如果输出的结果中没有远程仓库的 URL，说明还没有将本地仓库与远程仓库关联。可以使用以下命令添加远程仓库：</p><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin &lt;remote repository URL&gt;</span><br></pre></td></tr></table></figure></code></pre><p>将 “<remote repository URL>” 替换为您的远程仓库 URL。</p><ol start="2"><li>将本地仓库推送到远程仓库</li></ol><p>在命令行中输入以下命令，将本地仓库推送到远程仓库：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><p>其中，“origin” 是远程仓库的别名，“master” 是要推送的分支名称（以前用的），现在一般都用<br>“main”，具体看仓库分支。如果要推送其他分支，可以将 “master” 替换为其他分支名称</p><p>如果是第一次推送到远程仓库，需要使用 “-u” 参数，将本地仓库与远程仓库关联。</p><ol start="3"><li>输入用户名和密码</li></ol><p>在推送仓库时，可能需要输入用户名和密码。输入完成后，Git 就会将本地仓库推送到远程仓库中</p><p>注意：如果您在推送仓库时遇到问题，可以尝试使用以下命令查看 Git 的错误信息：</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --add core.quotepath false</span><br></pre></td></tr></table></figure><p>这样，就可以将错误信息显示为中文，方便您进行排查和修复</p><hr><p>以上每次提交都会有一个提交记录，也就是commit，如果不想保留之前的提交记录，可以按照以下步骤进行操作：</p><ol><li>使用以下命令将本地仓库的 master 分支重置为初始状态：</li></ol>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan new-master</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &quot;Initial commit&quot;</span><br></pre></td></tr></table></figure><p>这样，就可以将本地仓库的 master 分支重置为初始状态，并创建一个新的分支 new-master。</p><ol start="2"><li>使用以下命令删除远程仓库的 master 分支：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin :master</span><br></pre></td></tr></table></figure><p>这样，就可以删除远程仓库的 master 分支。</p><ol start="3"><li>使用以下命令将本地仓库的 new-master 分支重命名为 master 分支：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m master</span><br></pre></td></tr></table></figure><p>这样，就可以将本地仓库的 new-master 分支重命名为 master 分支。</p><ol start="4"><li>使用以下命令将本地仓库的 master 分支推送到远程仓库：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure><p>注意：使用 “-f” 参数可以强制推送本地仓库的 master 分支到远程仓库，覆盖之前的提交记录。这样做可能会导致之前提交的代码丢失，请谨慎操作。</p><p>做完，就可以将本地 Git 仓库的代码推送到远程仓库，并且不保留之前的提交记录</p><hr><p>如果想将 fork 的仓库推送到自己的 GitHub 仓库中，可以按照以下步骤进行操作：</p><ol><li>克隆 fork 的仓库到本地</li></ol><p>首先，需要将 fork 的仓库克隆到本地。在命令行中输入以下命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;forked repository URL&gt;</span><br></pre></td></tr></table></figure><p>将 “<forked repository URL>” 替换为 fork 的仓库的 URL</p><ol start="2"><li>添加远程仓库</li></ol><p>在命令行中进入克隆的本地仓库目录，使用以下命令添加你的 GitHub 仓库作为远程仓库：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream &lt;your repository URL&gt;</span><br></pre></td></tr></table></figure><p>将 “<your repository URL>” 替换为你的 GitHub 仓库的 URL</p><ol start="3"><li>拉取 upstream 分支的最新代码</li></ol><p>在命令行中输入以下命令，将 upstream 分支的最新代码拉取到本地：</p> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br></pre></td></tr></table></figure><ol start="4"><li>合并 upstream 分支的最新代码到本地仓库</li></ol><p>在命令行中输入以下命令，将 upstream 分支的最新代码合并到本地仓库的 master 分支中：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure><ol start="5"><li>推送代码到自己的 GitHub 仓库</li></ol><p>在命令行中输入以下命令，将本地仓库的代码推送到自己的 GitHub 仓库中：</p>   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p>这样，就可以将 fork 的仓库推送到自己的 GitHub 仓库中了。</p><p><strong>注意：</strong> 如果在推送代码时遇到权限问题，可能需要在 GitHub 上设置 SSH 密钥。可以参考 <a href="https://docs.github.com/en/get-started/using-git/about-git">GitHub<br>的官方文档</a>进行操作</p><p><strong>关于 upstream 分支</strong></p><p>upstream 分支是指原始仓库（upstream repository）的主分支（通常是 master 分支）。当你 fork 一个仓库时，会在你的<br>GitHub 账户下创建一个新的仓库，该仓库被称为 fork 的仓库（forked repository）。你可以将 fork<br>的仓库克隆到本地进行修改，并将修改后的代码推送到自己的 GitHub 仓库中。</p><p>upstream 分支的作用是将原始仓库的最新代码拉取到本地，以便在 fork 的仓库中进行更新。当原始仓库的代码发生变化时，可以使用 git fetch<br>upstream 命令将最新的代码拉取到本地，然后使用 git merge upstream/master 命令将最新的代码合并到本地仓库的 master<br>分支中。这样就可以将原始仓库的最新代码同步到自己的 GitHub 仓库中。</p><p><strong>注意：</strong> 在使用 upstream 分支时，需要确保你已经将自己的 GitHub 仓库与 fork 的仓库关联，并且已经将自己的 GitHub<br>仓库作为远程仓库添加到本地仓库中。可以使用 git remote add origin 命令添加自己的 GitHub 仓库作为远程仓库</p><hr><p>如果您想将别人的仓库推送到自己的仓库，并且不想保留别人的提交记录，可以按照以下步骤进行操作：</p><ol><li>首先，将别人的仓库克隆到本地：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;别人的仓库地址&gt;</span><br></pre></td></tr></table></figure><ol start="2"><li>进入克隆的本地仓库目录，创建一个新的 Git 仓库：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &lt;克隆的本地仓库目录&gt;</span><br><span class="line">git init</span><br></pre></td></tr></table></figure><pre><code>3. 将本地仓库与自己的 GitHub 仓库关联：在这之前可以先看一下是否已经有远程仓库了：`git remote -v` ，如果是别人的，修改方法是 </code></pre><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin &lt;你的远程仓库链接&gt;</span><br></pre></td></tr></table></figure><p>如果未关联过，则直接</p><pre><code>git remote add origin &lt;自己的仓库地址&gt;</code></pre><ol start="4"><li>将别人的仓库的所有提交记录合并为一个新的提交：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --squash &lt;别人的分支&gt;</span><br></pre></td></tr></table></figure><p><strong>注意：</strong> 这里的 --squash 参数表示将多个提交合并为一个新的提交。</p><ol start="5"><li>提交新的合并提交：</li></ol><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;New commit message&quot;</span><br></pre></td></tr></table></figure></code></pre><ol start="6"><li>推送新的提交到自己的 GitHub 仓库：</li></ol><pre><code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></code></pre><p><strong>注意</strong> ：这里的 master 表示要将新的提交推送到自己的 GitHub 仓库的 master 分支</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>流媒体支持IPv4+IPv6</title>
+      <link href="/2023/01/10/2%20(17)/"/>
+      <url>/2023/01/10/2%20(17)/</url>
+      
+        <content type="html"><![CDATA[<p>流媒体的大致定义：流媒体（streamingmedia）是指将一连串的媒体数据压缩后</p><span id="more"></span><p>经过网上分段发送<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE/5947370">数据</a>，在网上即时传输影音以供观赏的一种技术与过程，此技术使得数据包得以像流水一样发送；如果不使用此技术，就必须在使用前下载整个媒体文件。流式传输可传送现场影音或预存于服务器上的影片，当观看者在收看这些影音文件时，影音数据在送达观看者的计算机后立即由特定播放软件播放。</p><p>常见的跨国流媒体，如：Netflix，DisneyPlus等，但是有些IP是被屏蔽的，也就是说这些IP并不能用于观看。下面bujj来介绍两个检测脚本，可以便捷的查看小鸡IP对于世界各地主流流媒体的支持情况，amd，arm都可以玩</p><h3 id="脚本1–StreamUnlockTest">脚本1–StreamUnlockTest</h3><p>GitHub：<a href="https://github.com/LovelyHaochi/StreamUnlockTest">https://github.com/LovelyHaochi/StreamUnlockTest</a></p><p>干脆利落，支持IPv4+IPv6，没有广告夹杂，就是有些时日没有更新了，但不影响使用</p><p>使用方法：</p><pre><code>* bash &lt;(curl -sSL &quot;https://git.io/JswGm&quot;)</code></pre><p>高级用法，点我展开</p><pre><code>* bash &lt;(curl -sSL &quot;https://git.io/JswGm&quot;) [模式]</code></pre><p>模式可选:</p><pre><code>  * [HK]     Hong Kong  * [TW]     Taiwan  * [JP]     Japan  * [KR]     Korea  * [US]     United States  * [EU]     Europe  * [GLOBAL] Porn + Global</code></pre><p>例如：</p><pre><code>* bash &lt;(curl -sSL &quot;https://git.io/JswGm&quot;) HK</code></pre><p>则测试香港与国际的流媒体</p><h3 id="脚本2–RegionRestrictionCheck">脚本2–RegionRestrictionCheck</h3><p>Github：<a href="https://github.com/lmc999/RegionRestrictionCheck">https://github.com/lmc999/RegionRestrictionCheck</a></p><p>修改自<a href="https://github.com/CoiaPrant/MediaUnlock_Test">CoiaPrant</a>，输出排版较好，一直在维护，但夹杂广告，注意甄别</p><p>脚本方说：由于大部分 IP 的 Tiktok 检测时间过长，已将该检测移除出脚本<br>需要检测 Tiktok 区域请移步项目: <a href="https://github.com/lmc999/TikTokCheck">https://github.com/lmc999/TikTokCheck</a>，但这个脚本未开源，且仅支持amd</p><p>使用方法：使用脚本前请确认curl已安装</p><pre><code>* bash &lt;(curl -L -s check.unlock.media) -M 4</code></pre><p>只检测IPv4结果：</p><pre><code>* bash &lt;(curl -L -s check.unlock.media) -M 4</code></pre><p>只检测IPv6结果：</p><pre><code>* bash &lt;(curl -L -s check.unlock.media) -M 6</code></pre><p>指定检测的网卡名称：</p><pre><code>* bash &lt;(curl -L -s check.unlock.media) -I eth0</code></pre><p>选择脚本语言为英文：</p><pre><code>* bash &lt;(curl -L -s check.unlock.media) -E</code></pre><p>或者直接运行以下Docker命令 (兼容ARM架构)</p><pre><code>* docker run --rm -ti --net=host lmc999/regioncheck &amp;&amp; docker rmi lmc999/regioncheck</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>GNU的神兵利器</title>
+      <link href="/2023/01/10/3%20(23)/"/>
+      <url>/2023/01/10/3%20(23)/</url>
+      
+        <content type="html"><![CDATA[<p>Grep，AWK，Sed，find伟大的GNU工具集，天才们写给自己的神兵利器，每一个都削铁如泥，双剑或数剑合璧更是无坚不摧</p><span id="more"></span><p>但是它们每一个都脾气古怪，难以驾驭，功力不够就会反噬自身。这些工具都有着长长的参数选项，除了资深的系统管理员，我很少看到有人能真正的掌握和合理的利用他们，大多数开发者都是熟悉自己经常用到的个别命令，等到需要召唤它们更强大功能的时候，往往力不从心。</p><p>比如在项目中，代码的编译或安装脚本中就有不少像下面这样的命令，清空产生的中间文件，用的很频繁。</p><pre><code>find . -type f -name '*.if.*' -print0 | xargs -0 rm -rf  </code></pre><p>最基础的linux命令，但是这样的命令我从来不自己手动输入，万一哪天打错某个参数，或者多打了一个空格，谁知道会发生什么，这样的事情很多，请看<a href="http://coolshell.cn/articles/4875.html">一个空格引发的惨剧</a>。</p><h2 id="Vim和Grep">Vim和Grep</h2><p>吐槽归吐槽，作为有上进心的有为程序员，还是要积极练习使用这些神器的。对于程序开发来说，这其中可能Grep最重要，查找所有使用某个函数的地方</p><pre><code>find . -name &quot;*.cpp&quot; | xargs grep &quot;myfunction&quot;  </code></pre><p>查找crash的进程 ……</p><pre><code>ps -aux | grep &quot;myapp&quot;  </code></pre><p>Grep配合正则表达式有无数的用法，喜欢研究可自行google之，我们的重点是Vim。Vim是内置支持Grep的，Vim7.3更是更新了Grep的引擎，在Vim内Grep的速度更快了。但是Vim中的Grep一样不容易掌握，还好有很多简化Grep的插件可以用，包括grep的变种ack，这其中使用起来最方便的，最人性化的要数<a href="http://www.vim.org/scripts/script.php?script_id=2438">EasyGrep</a>了。</p><p>EasyGrep 主要功能：</p><ol><li>可视化的配置界面，可以让你很方便设置搜索路径，配备模式，递归模式等等。</li><li>可以直接搜索当前光标下的单词，你不用再手动输入命令了。</li><li>可以全局查找并替换，这在代码重构的时候特别有用，虽然这是IDE的基本功能，但是在Vim下我还没有看到那个插件做到EasyGrep这么好。用户可以选择是否替换当前匹配项，发现做错了，一个命令就可以取消所有的替换。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> GNU </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> GNU </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
